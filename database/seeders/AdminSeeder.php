@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -22,9 +23,9 @@ class AdminSeeder extends Seeder
         ]);
 
         $admins->each(function($admin){
-            $exist = Admin::where('email', $admin['email'])->first();
+            $exist = User::where('email', $admin['email'])->first();
             if(empty($exist)){
-                Admin::firstOrCreate([
+                User::firstOrCreate([
                     'name' => $admin['name'],
                     'email' => $admin['email'],
                     'password' => bcrypt($admin['password']),
