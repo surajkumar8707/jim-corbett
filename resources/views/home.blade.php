@@ -6,7 +6,7 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="assets/frontend/img/carousel-1.jpg" alt="Image">
+                    <img class="w-100" src="{{ asset('public/assets/frontend/img/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="assets/frontend/img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="{{ asset('public/assets/frontend/img/carousel-2.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="assets/frontend/img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{ asset('public/assets/frontend/img/about.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
@@ -110,10 +110,10 @@
                         <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
                         <div class="row mb-4">
                             <div class="col-6">
-                                <img class="img-fluid" src="assets/frontend/img/about-1.jpg" alt="">
+                                <img class="img-fluid" src="{{ asset('public/assets/frontend/img/about-1.jpg') }}" alt="">
                             </div>
                             <div class="col-6">
-                                <img class="img-fluid" src="assets/frontend/img/about-2.jpg" alt="">
+                                <img class="img-fluid" src="{{ asset('public/assets/frontend/img/about-2.jpg') }}" alt="">
                             </div>
                         </div>
                         <a href="" class="btn btn-primary mt-1">Book Now</a>
@@ -178,7 +178,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/destination-1.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/destination-1.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">United States</h5>
                             <span>100 Cities</span>
@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/destination-2.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/destination-2.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">United Kingdom</h5>
                             <span>100 Cities</span>
@@ -196,7 +196,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/destination-3.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/destination-3.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">Australia</h5>
                             <span>100 Cities</span>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/destination-4.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/destination-4.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">India</h5>
                             <span>100 Cities</span>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/destination-5.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/destination-5.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">South Africa</h5>
                             <span>100 Cities</span>
@@ -223,7 +223,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/destination-6.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/destination-6.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
                             <h5 class="text-white">Indonesia</h5>
                             <span>100 Cities</span>
@@ -281,7 +281,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/package-1.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/package-1.jpg') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
@@ -300,7 +300,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/package-2.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/package-2.jpg') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
@@ -319,7 +319,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/package-3.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/package-3.jpg') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
@@ -338,7 +338,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/package-4.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/package-4.jpg') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
@@ -357,7 +357,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/package-5.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/package-5.jpg') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
@@ -376,7 +376,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="assets/frontend/img/package-6.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('public/assets/frontend/img/package-6.jpg') }}" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
@@ -462,7 +462,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="assets/frontend/img/team-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/team-1.jpg') }}" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -479,7 +479,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="assets/frontend/img/team-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/team-2.jpg') }}" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -496,7 +496,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="assets/frontend/img/team-3.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/team-3.jpg') }}" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -513,7 +513,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="assets/frontend/img/team-4.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/team-4.jpg') }}" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -542,7 +542,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="text-center pb-4">
-                    <img class="img-fluid mx-auto" src="assets/frontend/img/testimonial-1.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="{{ asset('public/assets/frontend/img/testimonial-1.jpg') }}" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
                         <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
                         </p>
@@ -551,7 +551,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid mx-auto" src="assets/frontend/img/testimonial-2.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="{{ asset('public/assets/frontend/img/testimonial-2.jpg') }}" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
                         <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
                         </p>
@@ -560,7 +560,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid mx-auto" src="assets/frontend/img/testimonial-3.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="{{ asset('public/assets/frontend/img/testimonial-3.jpg') }}" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
                         <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
                         </p>
@@ -569,7 +569,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid mx-auto" src="assets/frontend/img/testimonial-4.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="{{ asset('public/assets/frontend/img/testimonial-4.jpg') }}" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
                         <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
                         </p>
@@ -594,7 +594,7 @@
                 <div class="col-lg-4 col-md-6 mb-4 pb-2">
                     <div class="blog-item">
                         <div class="position-relative">
-                            <img class="img-fluid w-100" src="assets/frontend/img/blog-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/blog-1.jpg') }}" alt="">
                             <div class="blog-date">
                                 <h6 class="font-weight-bold mb-n1">01</h6>
                                 <small class="text-white text-uppercase">Jan</small>
@@ -613,7 +613,7 @@
                 <div class="col-lg-4 col-md-6 mb-4 pb-2">
                     <div class="blog-item">
                         <div class="position-relative">
-                            <img class="img-fluid w-100" src="assets/frontend/img/blog-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/blog-2.jpg') }}" alt="">
                             <div class="blog-date">
                                 <h6 class="font-weight-bold mb-n1">01</h6>
                                 <small class="text-white text-uppercase">Jan</small>
@@ -632,7 +632,7 @@
                 <div class="col-lg-4 col-md-6 mb-4 pb-2">
                     <div class="blog-item">
                         <div class="position-relative">
-                            <img class="img-fluid w-100" src="assets/frontend/img/blog-3.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('public/assets/frontend/img/blog-3.jpg') }}" alt="">
                             <div class="blog-date">
                                 <h6 class="font-weight-bold mb-n1">01</h6>
                                 <small class="text-white text-uppercase">Jan</small>
