@@ -3,14 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use App\Models\SocialMediaLink;
 
 class AdminController extends Controller
 {
+
+    /**
+    * Admin Dashboard
+    * Route Name : admin/dashboard
+    * Route : admin.dashboard
+    * Method : GET
+    * @return \Illuminate\View\View
+    */
     public function dashboard(){
         return view('admins.dashboard');
     }
 
+    /**
+    * Admin Change Password
+    * Route Name : admin/dashboard
+    * Route : admin.dashboard
+    * Method : GET
+    * @return \Illuminate\View\View
+    */
     public  function changePassword(Request $request){
         return view('admins.change_password');
     }
@@ -40,16 +57,37 @@ class AdminController extends Controller
         // return view('admins.dashboard');
     }
 
+    /**
+    * Admin Show Profile
+    * Route Name : admin/profile
+    * Route : admin.show.profile
+    * Method : GET
+    * @return \Illuminate\View\View
+    */
     public  function showProfile(Request $request){
         $user = User::findOrFail(auth()->user()->id);
         return view('admins.profile.show', compact('user'));
     }
 
+    /**
+    * Admin Edit Prfile
+    * Route Name : admin/profile/edit
+    * Route : admin.edit.profile
+    * Method : GET
+    * @return \Illuminate\View\View
+    */
     public  function editProfile(Request $request){
         $user = User::findOrFail(auth()->user()->id);
         return view('admins.profile.edit', compact('user'));
     }
 
+    /**
+    * Admin Edit Prfile
+    * Route Name : admin/profile-update
+    * Route : admin.update.profile
+    * Method : PUT
+    * @return \Illuminate\View\View
+    */
     public  function updateProfile(Request $request){
         // return view('admins.dashboard');
         // dd($request->all());
@@ -84,5 +122,95 @@ class AdminController extends Controller
 
         return redirect()->route('admin.show.profile')->with('success', 'Profile updated successfully.');
     }
+
+    /**
+    * Admin Social Media show
+    * Route Name : admin/social-media/show
+    * Route : admin.social.media.show
+    * Method : PUT
+    * @return \Illuminate\View\View
+    */
+    public function socialMediaShow(){
+        $socialMediaLinks = SocialMediaLink::first();
+        return view('admins.social_media.show', compact('socialMediaLinks'));
+    }
+
+    /**
+    * Admin Social Media create
+    * Route Name : admin/social-media/create
+    * Route : admin.social.media.create
+    * Method : PUT
+    * @return \Illuminate\View\View
+    */
+    public function socialMediaCreate(){
+        $socialMediaLinks = SocialMediaLink::first();
+        return view('admins.social_media.create', compact('socialMediaLinks'));
+    }
+
+    /**
+    * Admin Social Media storeOrUpdate
+    * Route Name : admin/social-media/storeOrUpdate
+    * Route : admin.social.media.storeOrUpdate
+    * Method : POST
+    * @return \Illuminate\View\View
+    */
+    public function socialMediaStoreOrUpdate(Request $request){
+        $request->validate([
+            'youTube' => 'nullable|string',
+            'instagram' => 'nullable|string',
+            'facebook' => 'nullable|string',
+            'linkedin' => 'nullable|string',
+            'at_least_one' => 'required_without_all:youTube,instagram,facebook,linkedin',
+        ], [
+            'at_least_one' => 'At least one of YouTube, Instagram, Facebook, or LinkedIn is required.',
+        ]);
+        $socialMediaLinks = SocialMediaLink::firstOrNew();
+
+        // Update or add new links
+        $socialMediaLinks->youTube = $request->input('youTube');
+        $socialMediaLinks->instagram = $request->input('instagram');
+        $socialMediaLinks->facebook = $request->input('facebook');
+        $socialMediaLinks->linkedin = $request->input('linkedin');
+        $socialMediaLinks->save();
+
+        return redirect()->route('admin.social.media.show')->with(['message' => 'Social media links updated/added successfully']);
+    }
+
+    public function appSetting(){
+        $settings = Setting::first();
+        // dd($settings);
+        return view('admins.setting', compact('settings'));
+    }
+
+    public function appSettingUpdate(Request $request){
+        $request->validate([
+            'app_name' => 'required',
+            'email' => 'required|email',
+            'whatsapp' => 'required',
+            'contact' => 'required',
+            // 'header_image' => 'nullable|url',
+            'header_image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+        ]);
+        // Find an existing record or create a new one
+        $settings = Setting::firstOrNew();
+
+        // Update or add new settings
+        $settings->app_name = $request->input('app_name');
+        $settings->email = $request->input('email');
+        $settings->whatsapp = $request->input('whatsapp');
+        $settings->contact = $request->input('contact');
+
+        // Handle image upload
+        if ($request->hasFile('header_image')) {
+            $customFileName = 'custom_image_name_' . time() . '_' . rand(100, 999) . '.' . $request->file('header_image')->getClientOriginalExtension();
+            $request->file('header_image')->move(public_path('assets/images'), $customFileName);
+            $settings->header_image = 'assets/images/' . $customFileName;
+        }
+        // $settings->header_image = $request->input('header_image');
+        $settings->save();
+
+        return redirect()->route('admin.app.setting')->with('success', 'Settings updated/added successfully');
+    }
+
 
 }

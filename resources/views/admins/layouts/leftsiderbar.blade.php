@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -26,11 +26,27 @@
         Interface
     </div>
 
-    {{-- <li class="nav-item @active(['admin.executive-users.index', 'admin.executive-users.create', 'admin.executive-users.edit']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.executive-users.index') }}">
+    <li class="nav-item @active(['admin.social.media.show', 'admin.social.media.create', 'admin.social.media.storeOrUpdate']) active @endactive">
+        <a class="nav-link" href="{{ route('admin.social.media.show') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Executive Users</span></a>
+            <span>Social Media</span></a>
     </li>
+
+    <li class="nav-item @active(['admin.app.setting']) active @endactive">
+        <a class="nav-link" href="{{ route('admin.app.setting') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Setting</span></a>
+    </li>
+
+    <li class="nav-item @active(['admin.show.profile', 'admin.edit.profile', 'admin.update.profile']) active @endactive">
+        <a class="nav-link" href="{{ route('admin.show.profile') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Profile</span></a>
+    </li>
+
+
+    {{--
+
 
     <li class="nav-item @active(['admin.bills.list', 'admin.executive-users.create', 'admin.executive-users.edit']) active @endactive">
         <a class="nav-link" href="{{ route('admin.bills.list') }}">

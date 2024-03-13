@@ -46,17 +46,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
 
     // ---Social Media Links---
     Route::group(['prefix' => 'social-media', 'as' => 'social.media.'], function () {
-        Route::controller(SocialMediaLinkController::class)->group(function() {
-            Route::get("/show", "show")->name("show");
-            Route::get("/create", "create")->name("create");
-            Route::post("/storeOrUpdate", "storeOrUpdate")->name("storeOrUpdate");
+        Route::controller(AdminController::class)->group(function() {
+            Route::get("/show", "socialMediaShow")->name("show");
+            Route::get("/create", "socialMediaCreate")->name("create");
+            Route::post("/storeOrUpdate", "socialMediaStoreOrUpdate")->name("storeOrUpdate");
         });
     });
 
     Route::group(['prefix' => 'app', 'as' => 'app.'], function () {
-        Route::controller(AppSettingController::class)->group(function() {
-            Route::get("/setting", "setting")->name("setting");
-            Route::post("/setting-update", "settingUpdate")->name("setting.update");
+        Route::controller(AdminController::class)->group(function() {
+            Route::get("/setting", "appSetting")->name("setting");
+            Route::post("/setting-update", "appSettingUpdate")->name("setting.update");
         });
     });
     // Add other admin routes here...
