@@ -1,9 +1,9 @@
 @extends('auth.layouts')
 @section('content')
 <main class="login-form">
-    <div class="cotainer">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-lg-6 col-md-8 col-sm-12">
                 <div class="card">
                     <h3 class="card-header text-center">Login</h3>
                     <div class="card-body">

@@ -29,7 +29,7 @@
             </div> --}}
         </div>
     </nav>
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
         @yield('content')
     </div>
 </body>
