@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -34,6 +35,28 @@ class FrontEndController extends Controller
      */
     public function contact(){
         return view('contact');
+    }
+
+    /**
+    * This functions stores the contact information
+    * Route Name : save.contact
+    * Route : save-contact
+    * Method : POST
+    * @return \Illuminate\View\View
+    */
+    public function saveContact(Request $request){
+        // dd($request->all());
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+        $contact = Contact::create($validatedData);
+
+        // Optionally, you can add a success message or redirect to a thank-you page
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 
     /**

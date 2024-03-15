@@ -21,6 +21,7 @@ Route::controller(FrontEndController::class)->group(function(){
     Route::get('/', 'index')->name('home');
     Route::get('/about', 'about')->name('about');
     Route::get('/contact', 'contact')->name('contact');
+    Route::post('/save-contact', 'saveContact')->name('save.contact');
     Route::get('/jungle-safari', 'jungleSafari')->name('jungle.safari');
     Route::get('/canter-ride', 'canterRide')->name('canter.ride');
     Route::get('/resorts', 'resorts')->name('resorts');
@@ -43,6 +44,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('profile', [AdminController::class, 'showProfile'])->name('show.profile');
     Route::get('profile/edit', [AdminController::class, 'editProfile'])->name('edit.profile');
     Route::put('profile-update', [AdminController::class, 'updateProfile'])->name('update.profile');
+    Route::get('contacts', [AdminController::class, 'showContacts'])->name('contacts');
 
     // ---Social Media Links---
     Route::group(['prefix' => 'social-media', 'as' => 'social.media.'], function () {

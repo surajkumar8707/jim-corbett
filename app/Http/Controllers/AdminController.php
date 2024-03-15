@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Contact;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Models\SocialMediaLink;
@@ -121,6 +122,18 @@ class AdminController extends Controller
         $user->update($data);
 
         return redirect()->route('admin.show.profile')->with('success', 'Profile updated successfully.');
+    }
+
+    /**
+    * Admin Social Media show
+    * Route Name : contacts
+    * Route : admin.contacts
+    * Method : PUT
+    * @return \Illuminate\View\View
+    */
+    public function showContacts(){
+        $contacts = Contact::orderBy('created_at', 'DESC')->paginate(10);
+        return view('admins.contacts', compact('contacts'));
     }
 
     /**

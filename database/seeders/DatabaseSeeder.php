@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             SocialMediaLinkSeeder::class,
             SettingSeeder::class,
+            ContactsTableSeeder::class,
         ]);
     }
 }

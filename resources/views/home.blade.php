@@ -107,11 +107,11 @@
                     </div>
                     <div class="col-md-6">
                         <p class="py-2 text-justify" style="text-indent: 50px;">
-                            Welcome to Jim Corbett National Park, your ultimate destination for an unforgettable tour and travel experience! We are a premier platform for all your travel needs, offering a wide array of services and packages for an enriching vacation. Our website is designed with the aim of providing you with the best experience, right from the comfort of your own home.Located in the northern state of Uttarakhand, India, Jim Corbett National Park is a paradise for nature lovers and wildlife enthusiasts. This pristine park is spread over an area of 1,318 square kilometers and is named after the famous hunter turned conservationist, Jim Corbett. The park is home to a diverse range of flora and fauna, making it a must-visit destination for anyone looking to reconnect with nature.Our website is your one-stop solution for all things related to Jim Corbett National Park.
+                            Welcome to {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park, your ultimate destination for an unforgettable tour and travel experience! We are a premier platform for all your travel needs, offering a wide array of services and packages for an enriching vacation. Our website is designed with the aim of providing you with the best experience, right from the comfort of your own home.Located in the northern state of Uttarakhand, India, {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park is a paradise for nature lovers and wildlife enthusiasts. This pristine park is spread over an area of 1,318 square kilometers and is named after the famous hunter turned conservationist, {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }}. The park is home to a diverse range of flora and fauna, making it a must-visit destination for anyone looking to reconnect with nature.Our website is your one-stop solution for all things related to {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park.
                         </p>
 
                         <p class="py-2 text-justify" style="text-indent: 50px;">
-                            At Jim Corbett National Park, we believe in promoting responsible and sustainable tourism. Our team of experienced guides and naturalists ensures that all our tours and activities are conducted in an eco-friendly manner, with utmost respect for the environment. We also offer various community-based programs, which allow visitors to interact with the locals and learn about their way of life.
+                            At {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park, we believe in promoting responsible and sustainable tourism. Our team of experienced guides and naturalists ensures that all our tours and activities are conducted in an eco-friendly manner, with utmost respect for the environment. We also offer various community-based programs, which allow visitors to interact with the locals and learn about their way of life.
                         </p>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
             </div>
             <div class="container">
                 <p class="py-2 text-justify" style="text-indent: 50px;line-height:30px;">
-                    Fun fact: Jim Corbett was an Indian-born Brit who was most well-known as a master tiger hunter. Not exactly what we would call conservation today. But back in the early 1900s Jim Corbett tracked man-eating tigers expertly and protected the small villages of Uttar Pradesh. Despite his dubious conservation techniques (at the time there were MANY more tigers in Indian jungles), he was responsible for establishing India’s very first national park (this one) to protect the unique species inside it.
+                    Fun fact: {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} was an Indian-born Brit who was most well-known as a master tiger hunter. Not exactly what we would call conservation today. But back in the early 1900s {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} tracked man-eating tigers expertly and protected the small villages of Uttar Pradesh. Despite his dubious conservation techniques (at the time there were MANY more tigers in Indian jungles), he was responsible for establishing India’s very first national park (this one) to protect the unique species inside it.
                 </p>
             </div>
         </div>
@@ -146,7 +146,7 @@
             </div>
             <div class="container">
                 <p class="py-2 text-justify" style="text-indent: 30px;line-height:25px;">
-                    Even if you don’t see tigers inside Jim Corbett you will probably see wild elephants because the park has a huge population. And they are relatively easy to spot since they like to follow the park trails for easier movement. You’ll also probably see tropical birds, chital deer, sambar deer, jackal, mongoose, grey langurs, rhesus macaques, and barking deer.
+                    Even if you don’t see tigers inside {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} you will probably see wild elephants because the park has a huge population. And they are relatively easy to spot since they like to follow the park trails for easier movement. You’ll also probably see tropical birds, chital deer, sambar deer, jackal, mongoose, grey langurs, rhesus macaques, and barking deer.
                 </p>
 
                 <div class="row">

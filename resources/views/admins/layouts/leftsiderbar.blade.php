@@ -44,6 +44,12 @@
             <span>Profile</span></a>
     </li>
 
+    <li class="nav-item @active(['admin.contacts']) active @endactive">
+        <a class="nav-link" href="{{ route('admin.contacts') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Contacts</span></a>
+    </li>
+
 
     {{--
 
