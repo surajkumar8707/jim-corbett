@@ -36,9 +36,27 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $contacts->links() }} <!-- Pagination links -->
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+@push('style')
+<!-- CSS files for DataTables -->
+<link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+@endpush
+
+@push('script')
+<!-- JavaScript files for DataTables -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Initialize DataTables -->
+<script>
+    $(document).ready(function() {
+        $('#dataTable').DataTable();
+    });
+</script>
+@endpush

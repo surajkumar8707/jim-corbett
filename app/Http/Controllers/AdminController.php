@@ -132,7 +132,7 @@ class AdminController extends Controller
     * @return \Illuminate\View\View
     */
     public function showContacts(){
-        $contacts = Contact::orderBy('created_at', 'DESC')->paginate(10);
+        $contacts = Contact::orderBy('created_at', 'DESC')->get();
         return view('admins.contacts', compact('contacts'));
     }
 
