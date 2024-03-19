@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\PefectTourPackages;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -14,7 +15,22 @@ class FrontEndController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return view('home');
+        $packages = PefectTourPackages::where('status', 1)->get();
+        // dd($packages->toArray());
+        return view('home', compact('packages'));
+    }
+
+    /**
+     * Description of your controller function.
+     * @Route : package/{id}
+     * @Route_name : package.show
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $package = PefectTourPackages::find($id);
+        return view('package_details', compact('package'));
     }
 
     /**
