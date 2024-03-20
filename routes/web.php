@@ -62,5 +62,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
             Route::post("/setting-update", "appSettingUpdate")->name("setting.update");
         });
     });
+
+    Route::group(['prefix' => 'tour-package', 'as' => 'tour.package.'], function () {
+        Route::controller(AdminController::class)->group(function() {
+            Route::get("/", "tourPackageList")->name("list");
+            Route::get("/create", "tourPackageCreate")->name("create");
+            Route::post("/store", "tourPackageStore")->name("store");
+            Route::get("/edit/{id}", "tourPackageEdit")->name("edit");
+            Route::post("/update/{id}", "tourPackageUpdate")->name("update");
+            Route::get("/delete/{id}", "tourPackageDelete")->name("delete");
+            Route::get("/show/{id}", "tourPackageShow")->name("show");
+        });
+    });
     // Add other admin routes here...
 });

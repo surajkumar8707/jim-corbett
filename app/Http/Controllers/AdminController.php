@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Models\SocialMediaLink;
+use App\Models\PefectTourPackages;
 
 class AdminController extends Controller
 {
@@ -223,6 +224,34 @@ class AdminController extends Controller
         $settings->save();
 
         return redirect()->route('admin.app.setting')->with('success', 'Settings updated/added successfully');
+    }
+
+    public function tourPackageList(){
+        $tour_packages = PefectTourPackages::get();
+        return view('admins.tour_package.index', compact('tour_packages'));
+    }
+
+    public function tourPackageCreate(){
+        return view('admins.tour_package.create');
+    }
+    public function tourPackageStore(Request $request){
+
+    }
+    public function tourPackageEdit($id){
+        $tour_package = PefectTourPackages::find($id);
+        return view('admins.tour_package.edit', compact('tour_package'));
+    }
+    public function tourPackageUpdate(Request $request, $id){
+
+    }
+
+    public function tourPackageShow($id){
+        $tour_package = PefectTourPackages::find($id);
+        return view('admins.tour_package.show');
+    }
+
+    public function tourPackageDelete($id){
+        $tour_package = PefectTourPackages::find($id);
     }
 
 

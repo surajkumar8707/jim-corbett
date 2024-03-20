@@ -49,6 +49,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Contacts</span></a>
     </li>
+    <li class="nav-item @active(['admin.tour.package.list', 'admin.tour.package.create', 'admin.tour.package.edit']) active @endactive">
+        <a class="nav-link" href="{{ route('admin.tour.package.list') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Tour Packages</span></a>
+    </li>
 
 
     {{--
