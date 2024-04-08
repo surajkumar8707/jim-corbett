@@ -21,7 +21,7 @@ class FrontEndController extends Controller
             ])->get();
 
             $tour_packages = PefectTourPackages::where([
-                'tour_category_id' => 3,
+                'tour_category_id' => 1,
                 'status' => 1,
             ])->get();
         // dd($packages->toArray());
