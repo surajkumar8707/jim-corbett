@@ -168,6 +168,68 @@ class TourCategorySeeder extends Seeder
                 ],
                 [
                     'name' => 'Tour Package',
+                    'package' => [
+                        [
+                            // 'tour_category_id' => 2,
+                            'name' => 'Corbett Budget Tour',
+                            'description' => "Corbett National Park is considered as one of the most expensive places in North India. So here we are offering the Budget Tour Package in Corbett National Park with the best possible price which will not burden your pocket.",
+                            'images' => 'assets/frontend/img/packages/corbett-budget-tour-290x290.webp',
+                            'price' => 3500,
+                            'duration' => '01 Night / 02 Days, Delhi - Corbett - Delhi',
+                            'itinerary' => 'Itinerary for Package 1',
+                            'accommodations' => 'Accommodations for Package 1',
+                            'meals' => 'Meals for Package 1',
+                            'transportation' => 'Transportation for Package 1',
+                            'tour_guides' => 'Tour guides for Package 1',
+                            'status' => 1,
+                        ],
+
+                        [
+                            // 'tour_category_id' => 2,
+                            'name' => 'Dhikala Tiger Tracing Tour',
+                            'description' => "Dhikala is one of the most popular sought after tourist accommodation place in Corbett National Park and tracing the tiger in the most thrilling activity you can possibly do in Jeep(Gypsy), Elephant & Canter.",
+                            'images' => 'assets/frontend/img/packages/dhikala-tiger-tour-290x290.webp',
+                            'price' => 8500,
+                            'duration' => '03 Nights / 04 Days, Delhi - Dhikala - Delhi',
+                            'itinerary' => 'Itinerary for Package 1',
+                            'accommodations' => 'Accommodations for Package 1',
+                            'meals' => 'Meals for Package 1',
+                            'transportation' => 'Transportation for Package 1',
+                            'tour_guides' => 'Tour guides for Package 1',
+                            'status' => 1,
+                        ],
+
+                        [
+                            // 'tour_category_id' => 2,
+                            'name' => 'Dhikala Gairal Tour',
+                            'description' => "After Dhikala, Gairal is the most preferred forest lodge amongst visitors which is located on the banks of Ramganga river. Gairal forest lodge have electricity for a few hours in the evening via generator.",
+                            'images' => 'assets/frontend/img/packages/dhikala-weekend-tour-290x290.webp',
+                            'price' => 8500,
+                            'duration' => '02 Nights / 03 Days, Delhi - Dhikala - Gairal - Delhi',
+                            'itinerary' => 'Itinerary for Package 1',
+                            'accommodations' => 'Accommodations for Package 1',
+                            'meals' => 'Meals for Package 1',
+                            'transportation' => 'Transportation for Package 1',
+                            'tour_guides' => 'Tour guides for Package 1',
+                            'status' => 1,
+                        ],
+
+                        [
+                            // 'tour_category_id' => 2,
+                            'name' => 'Corbett Group Tour',
+                            'description' => "Get special discounts for College Group / School Student Group / Corporate or Company Group / Call-Centre group (More than 20 persons), packages available as low as INR 1200-2500 per student or person respectively.",
+                            'images' => 'assets/frontend/img/packages/jeep-safari_01.webp',
+                            'price' => 1200,
+                            'duration' => 'Customised, Delhi - Corbett - Delhi',
+                            'itinerary' => 'Itinerary for Package 1',
+                            'accommodations' => 'Accommodations for Package 1',
+                            'meals' => 'Meals for Package 1',
+                            'transportation' => 'Transportation for Package 1',
+                            'tour_guides' => 'Tour guides for Package 1',
+                            'status' => 1,
+                        ],
+
+                    ]
                 ],
             )
         );
