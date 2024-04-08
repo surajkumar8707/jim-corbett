@@ -126,6 +126,35 @@
             <div class="text-center mb-3">
                 {{-- <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Home Page</h6> --}}
                 <h1>Your Guide to {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }}</h1>
+
+                <div class="row">
+                    @forelse ($tour_packages as $key => $package)
+                    {{-- @dd($package) --}}
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="package-item bg-white mb-2">
+                            <img class="img-fluid" src="{{ public_asset($package->images) }}" alt="">
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    {{-- <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small> --}}
+                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>{{ $package->duration }}</small>
+                                    {{-- <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small> --}}
+                                </div>
+                                <a class="h5 text-decoration-none" href="{{ route('package.show', $package->id) }}">{{ $package->name }}</a>
+                                <div class="border-top mt-4 pt-4">
+                                    <div class="d-flex justify-content-between">
+                                        {{-- <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6> --}}
+                                        <h5 class="m-0">{{ $package->price }} <i class="fa fa-rupee-sign  mr-2"></i></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @empty
+
+                    @endforelse
+                </div>
+
+
             </div>
             <div class="container">
                 <p class="py-2 text-justify" style="text-indent: 50px;line-height:30px;">

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pefect_tour_packages', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tour_category_id');
             $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->string('images')->nullable();

@@ -15,6 +15,7 @@ class PefectTourPackagesSeeder extends Seeder
     {
         $packages = [
             [
+                'tour_category_id' => 2,
                 'name' => 'Machaan Resort',
                 'description' => 'Uttarakhand, is a perfect combination of serenity, tranquility, adventure, nature, beauty, and peace, all that a couple could hope to find for an ideal honeymoon, providing a retreat and an idyllic location for a honeymoon away from the chaos of a metropolitan.',
                 'images' => 'assets/frontend/img/packages/machaan-resort.jpg',
@@ -28,6 +29,7 @@ class PefectTourPackagesSeeder extends Seeder
                 'status' => 1,
             ],
             [
+                'tour_category_id' => 2,
                 'name' => 'Arch The Baakhli Corbett',
                 'description' => 'Uttarakhand, is a perfect combination of serenity, tranquility, adventure, nature, beauty, and peace, all that a couple could hope to find for an ideal honeymoon, providing a retreat and an idyllic location for a honeymoon away from the chaos of a metropolitan.',
                 'images' => 'assets/frontend/img/packages/arch-thebaakhli-corbett.jpg',
@@ -41,6 +43,7 @@ class PefectTourPackagesSeeder extends Seeder
                 'status' => 1,
             ],
             [
+                'tour_category_id' => 2,
                 'name' => 'Countryard Resort',
                 'description' => 'Uttarakhand, is a perfect combination of serenity, tranquility, adventure, nature, beauty, and peace, all that a couple could hope to find for an ideal honeymoon, providing a retreat and an idyllic location for a honeymoon away from the chaos of a metropolitan.',
                 'images' => 'assets/frontend/img/packages/countryard-resort.jpg',
@@ -54,6 +57,7 @@ class PefectTourPackagesSeeder extends Seeder
                 'status' => 1,
             ],
             [
+                'tour_category_id' => 2,
                 'name' => 'Corbett The Grand',
                 'description' => 'Uttarakhand, is a perfect combination of serenity, tranquility, adventure, nature, beauty, and peace, all that a couple could hope to find for an ideal honeymoon, providing a retreat and an idyllic location for a honeymoon away from the chaos of a metropolitan.',
                 'images' => 'assets/frontend/img/packages/corbett-the-grand.jpg',
@@ -67,6 +71,7 @@ class PefectTourPackagesSeeder extends Seeder
                 'status' => 1,
             ],
             [
+                'tour_category_id' => 2,
                 'name' => 'La Savanna',
                 'description' => 'Uttarakhand, is a perfect combination of serenity, tranquility, adventure, nature, beauty, and peace, all that a couple could hope to find for an ideal honeymoon, providing a retreat and an idyllic location for a honeymoon away from the chaos of a metropolitan.',
                 'images' => 'assets/frontend/img/packages/la-savanna.jpg',
@@ -80,6 +85,7 @@ class PefectTourPackagesSeeder extends Seeder
                 'status' => 1,
             ],
             [
+                'tour_category_id' => 2,
                 'name' => 'Riverside Resort',
                 'description' => 'Uttarakhand, is a perfect combination of serenity, tranquility, adventure, nature, beauty, and peace, all that a couple could hope to find for an ideal honeymoon, providing a retreat and an idyllic location for a honeymoon away from the chaos of a metropolitan.',
                 'images' => 'assets/frontend/img/packages/riverside-resort.jpg',

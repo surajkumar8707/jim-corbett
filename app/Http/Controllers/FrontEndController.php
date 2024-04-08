@@ -15,9 +15,17 @@ class FrontEndController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $packages = PefectTourPackages::where('status', 1)->get();
+        $packages = PefectTourPackages::where([
+                'tour_category_id' => 2,
+                'status' => 1,
+            ])->get();
+
+            $tour_packages = PefectTourPackages::where([
+                'tour_category_id' => 3,
+                'status' => 1,
+            ])->get();
         // dd($packages->toArray());
-        return view('home', compact('packages'));
+        return view('home', compact('packages', 'tour_packages'));
     }
 
     /**

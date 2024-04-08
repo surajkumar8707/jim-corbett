@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             SocialMediaLinkSeeder::class,
             SettingSeeder::class,
             ContactsTableSeeder::class,
-            PefectTourPackagesSeeder::class,
+            TourCategorySeeder::class,
+            // PefectTourPackagesSeeder::class,
         ]);
     }
 }
