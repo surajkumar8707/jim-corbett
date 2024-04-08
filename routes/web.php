@@ -17,9 +17,9 @@ use App\Http\Controllers\AdminController;
 */
 
 
-Route::controller(FrontEndController::class)->group(function(){
+Route::controller(FrontEndController::class)->group(function () {
     Route::get('/', 'index')->name('home');
-    Route::get('package/{id}','show')->name('package.show');
+    Route::get('package/{id}', 'show')->name('package.show');
     Route::get('/about', 'about')->name('about');
     Route::get('/contact', 'contact')->name('contact');
     Route::post('/save-contact', 'saveContact')->name('save.contact');
@@ -31,6 +31,7 @@ Route::controller(FrontEndController::class)->group(function(){
     Route::get('/coorporate-group', 'coorporateGroup')->name('coorporate.group');
     Route::get('/privacy-policy', 'privacyPolicy')->name('privacy.policy');
     Route::get('/term-condition', 'termCondition')->name('term.condition');
+    Route::post('/enquiry-submit', 'enquirySubmit')->name('enquiry.submit');
 });
 
 // Authentication routes
@@ -38,7 +39,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/custom-login', [LoginController::class, 'customLogin'])->name('login.custom');
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function() {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('change-password', [AdminController::class, 'changePassword'])->name('change.password');
     Route::post('change-password', [AdminController::class, 'updatePassword'])->name('update.password');
@@ -49,7 +50,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
 
     // ---Social Media Links---
     Route::group(['prefix' => 'social-media', 'as' => 'social.media.'], function () {
-        Route::controller(AdminController::class)->group(function() {
+        Route::controller(AdminController::class)->group(function () {
             Route::get("/show", "socialMediaShow")->name("show");
             Route::get("/create", "socialMediaCreate")->name("create");
             Route::post("/storeOrUpdate", "socialMediaStoreOrUpdate")->name("storeOrUpdate");
@@ -57,14 +58,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     });
 
     Route::group(['prefix' => 'app', 'as' => 'app.'], function () {
-        Route::controller(AdminController::class)->group(function() {
+        Route::controller(AdminController::class)->group(function () {
             Route::get("/setting", "appSetting")->name("setting");
             Route::post("/setting-update", "appSettingUpdate")->name("setting.update");
         });
     });
 
     Route::group(['prefix' => 'tour-package', 'as' => 'tour.package.'], function () {
-        Route::controller(AdminController::class)->group(function() {
+        Route::controller(AdminController::class)->group(function () {
             Route::get("/", "tourPackageList")->name("list");
             Route::get("/create", "tourPackageCreate")->name("create");
             Route::post("/store", "tourPackageStore")->name("store");
@@ -72,6 +73,18 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
             Route::post("/update/{id}", "tourPackageUpdate")->name("update");
             Route::get("/delete/{id}", "tourPackageDelete")->name("delete");
             Route::get("/show/{id}", "tourPackageShow")->name("show");
+        });
+    });
+
+    Route::group(['prefix' => 'enquiries', 'as' => 'enquiries.'], function () {
+        Route::controller(AdminController::class)->group(function () {
+            Route::get("/", "enquiriesList")->name("list");
+            // Route::get("/create", "tourPackageCreate")->name("create");
+            // Route::post("/store", "tourPackageStore")->name("store");
+            // Route::get("/edit/{id}", "tourPackageEdit")->name("edit");
+            // Route::post("/update/{id}", "tourPackageUpdate")->name("update");
+            // Route::get("/delete/{id}", "tourPackageDelete")->name("delete");
+            // Route::get("/show/{id}", "tourPackageShow")->name("show");
         });
     });
     // Add other admin routes here...

@@ -54,6 +54,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Tour Packages</span></a>
     </li>
+    <li class="nav-item @active(['admin.enquiries.list']) active @endactive">
+        <a class="nav-link" href="{{ route('admin.enquiries.list') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Enquiries</span></a>
+    </li>
 
 
     {{--

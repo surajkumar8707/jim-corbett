@@ -103,37 +103,71 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-thumbnail" src="{{ public_asset('assets/frontend/img/jim-corbett.jpg') }}"
+                        <img class="img-thumbnail" src="{{ public_asset('assets/frontend/img/hanuman_dham.jpg') }}"
                             alt="">
                     </div>
                     <div class="col-md-6">
+                        <h5>Shri Hanuman Dham Ramnagar: A Haven of Devotion</h5>
                         <p class="py-2 text-justify" style="text-indent: 50px;">
-                            Welcome to {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park,
-                            your ultimate destination for an unforgettable tour and travel experience! We are a premier
-                            platform for all your travel needs, offering a wide array of services and packages for an
-                            enriching vacation. Our website is designed with the aim of providing you with the best
-                            experience, right from the comfort of your own home.Located in the northern state of
-                            Uttarakhand, India, {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National
-                            Park is a paradise for nature lovers and wildlife enthusiasts. This pristine park is spread over
-                            an area of 1,318 square kilometers and is named after the famous hunter turned conservationist,
-                            {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }}. The park is home to a
-                            diverse range of flora and fauna, making it a must-visit destination for anyone looking to
-                            reconnect with nature.Our website is your one-stop solution for all things related to
-                            {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park.
+                            Shri Hanuman Dham, nestled in the serene town of Ramnagar, Uttarakhand, stands as a revered
+                            sanctuary dedicated to Lord Hanuman, the epitome of devotion and strength in Hindu mythology.
+                            This sacred temple, adorned with intricate carvings and vibrant colors, beckons devotees from
+                            far and wide to seek solace, blessings, and spiritual fulfillment.
                         </p>
 
+                        <h5>Divine Presence</h5>
                         <p class="py-2 text-justify" style="text-indent: 50px;">
-                            At {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }} National Park, we believe
-                            in promoting responsible and sustainable tourism. Our team of experienced guides and naturalists
-                            ensures that all our tours and activities are conducted in an eco-friendly manner, with utmost
-                            respect for the environment. We also offer various community-based programs, which allow
-                            visitors to interact with the locals and learn about their way of life.
+                            At the heart of Shri Hanuman Dham lies the sanctum sanctorum, where the divine idol of Lord
+                            Hanuman resides. Devotees gather here in reverent silence, offering prayers, flowers, and sacred
+                            offerings to the beloved deity. The presence of Lord Hanuman fills the air with a sense of peace
+                            and tranquility, instilling devotees with courage, faith, and devotion.
                         </p>
                     </div>
                 </div>
+
+                <h5>Spiritual Practices</h5>
+                <p class="py-2 text-justify" style="text-indent: 50px;">
+                    Throughout the day, the temple resonates with the sounds of sacred chants and devotional songs,
+                    as priests perform rituals and ceremonies to honor Lord Hanuman. Devotees participate in
+                    spiritual practices such as aarti (offering of light) and bhajans (devotional songs), deepening
+                    their connection with the divine and seeking his blessings.
+                </p>
+
+                <h5>Festivals and Celebrations</h5>
+                <p class="py-2 text-justify" style="text-indent: 50px;">
+                    Shri Hanuman Dham comes alive during festivals dedicated to Lord Hanuman, such as Hanuman Jayanti.
+                    Devotees gather in large numbers to celebrate the auspicious occasion, offering prayers and seeking the
+                    blessings of the mighty monkey god. The temple is adorned with decorations, and the air is filled with
+                    the sounds of joyous chants and devotional fervor.
+                </p>
+
+                <h5>Community Engagement</h5>
+                <p class="py-2 text-justify" style="text-indent: 50px;">
+                    Beyond its role as a place of worship, Shri Hanuman Dham actively engages with the local community,
+                    offering social welfare initiatives and charitable activities. From providing meals to the needy to
+                    organizing health camps, the temple serves as a beacon of compassion and service, embodying the
+                    teachings of Lord Hanuman.
+                </p>
+
+                <h5>Source of Inspiration</h5>
+                <p class="py-2 text-justify" style="text-indent: 50px;">
+                    For devotees, Shri Hanuman Dham is a source of inspiration and strength in times of need. The divine
+                    presence of Lord Hanuman instills courage, faith, and devotion, enabling devotees to face life's
+                    challenges with grace and resilience. Each visit to the temple deepens their spiritual connection with
+                    the beloved deity, reaffirming their belief in his boundless love and protection.
+                </p>
+
+                <h5>Conclusion</h5>
+                <p class="py-2 text-justify" style="text-indent: 50px;">
+                    In the tranquil surroundings of Ramnagar, Shri Hanuman Dham stands as a beacon of devotion and faith,
+                    drawing devotees into its sacred embrace. With its divine presence, spiritual practices, and festive
+                    celebrations, the temple serves as a haven of solace and inspiration for all who seek the blessings of
+                    Lord Hanuman.
+                </p>
             </div>
         </div>
     </div>
+
     <!-- Home Page Instro end -->
 
     <!-- Guide Start -->
@@ -444,7 +478,7 @@
     <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-7 mb-5 mb-lg-0">
+                <div class="col-lg-5 mb-5 mb-lg-0">
                     <div class="mb-4">
                         <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
                         <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
@@ -461,13 +495,69 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-7">
                     <div class="card border-0">
                         <div class="card-header bg-primary text-center p-4">
                             <h1 class="text-white m-0">Sign Up Now</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
-                            <form>
+
+                            <form action="{{ route('enquiry.submit') }}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                    @error('name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                    @error('email')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                    @error('phone')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                                    @error('message')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
+
+                            {{-- <form action="{{ route('enquiry.submit') }}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form> --}}
+
+                            {{-- <form>
                                 <div class="form-group">
                                     <input type="text" class="form-control p-4" placeholder="Your name"
                                         required="required" />
@@ -487,7 +577,7 @@
                                 <div>
                                     <button class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
                                 </div>
-                            </form>
+                            </form> --}}
                         </div>
                     </div>
                 </div>

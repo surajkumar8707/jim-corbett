@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Contact;
 use App\Models\Setting;
+use App\Models\Enquiry;
 use Illuminate\Http\Request;
 use App\Models\SocialMediaLink;
 use App\Models\PefectTourPackages;
@@ -377,5 +378,12 @@ class AdminController extends Controller
     public function tourPackageDelete($id)
     {
         $tour_package = PefectTourPackages::find($id);
+    }
+
+    public function enquiriesList()
+    {
+        $enquiries = Enquiry::get();
+        // dd($enquiries->toArray());
+        return view('admins.enquiry.index', compact('enquiries'));
     }
 }
