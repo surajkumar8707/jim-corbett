@@ -26,8 +26,13 @@ class FrontEndController extends Controller
             'tour_category_id' => 1,
             'status' => 1,
         ])->get();
+
+        $corbett_packages = PefectTourPackages::where([
+            'tour_category_id' => 3,
+            'status' => 1,
+        ])->get();
         // dd($packages->toArray());
-        return view('home', compact('packages', 'tour_packages'));
+        return view('home', compact('packages', 'tour_packages', 'corbett_packages'));
     }
 
     /**

@@ -218,7 +218,7 @@ class TourCategorySeeder extends Seeder
                             // 'tour_category_id' => 2,
                             'name' => 'Corbett Group Tour',
                             'description' => "Get special discounts for College Group / School Student Group / Corporate or Company Group / Call-Centre group (More than 20 persons), packages available as low as INR 1200-2500 per student or person respectively.",
-                            'images' => 'assets/frontend/img/packages/jeep-safari_01.webp',
+                            'images' => 'assets/frontend/img/packages/corbett-group-tour-290x290.webp',
                             'price' => 1200,
                             'duration' => 'Customised, Delhi - Corbett - Delhi',
                             'itinerary' => 'Itinerary for Package 1',
