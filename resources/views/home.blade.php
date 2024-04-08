@@ -477,8 +477,8 @@
     <!-- Registration Start -->
     <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
         <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="row align-items-center mx-auto">
+                {{-- <div class="col-lg-5 mb-5 mb-lg-0">
                     <div class="mb-4">
                         <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
                         <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
@@ -494,11 +494,11 @@
                         <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.
                         </li>
                     </ul>
-                </div>
-                <div class="col-lg-7">
+                </div> --}}
+                <div class="col-lg-8 mx-auto">
                     <div class="card border-0">
                         <div class="card-header bg-primary text-center p-4">
-                            <h1 class="text-white m-0">Sign Up Now</h1>
+                            <h1 class="text-white m-0">Enquiry</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
 
