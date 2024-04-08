@@ -61,6 +61,20 @@ class TourCategorySeeder extends Seeder
                             'tour_guides' => 'Tour guides for Package 1',
                             'status' => 1,
                         ],
+                        [
+                            // 'tour_category_id' => 2,
+                            'name' => 'Night Stay Accommodation Online Booking & Tariff - Jim Corbett National Park',
+                            'description' => "Welcome to Night Stay Accommodation Booking to Corbett National Park. Visitors can book online Night Stay Accommodation for different zones of Corbett National park namely Dhikala - Bijrani - Jhirna - Sonanadi - Durgadevi - Dhela. All the procedures of Night Stay Accommodation Booking at Corbett are managed by the forest officials as per the guidelines of India's forest department. Please note that we cannot influence the night stay accommodation zone, night stay accommodation, safari driver and the naturalist guide as it is not in our hand. It is solely decided by the forest officials.",
+                            'images' => 'assets/frontend/img/packages/banner-image-1.webp',
+                            'price' =>  2500.00,
+                            'duration' => 'Per Person, Available today',
+                            'itinerary' => 'Itinerary for Package 1',
+                            'accommodations' => 'Accommodations for Package 1',
+                            'meals' => 'Meals for Package 1',
+                            'transportation' => 'Transportation for Package 1',
+                            'tour_guides' => 'Tour guides for Package 1',
+                            'status' => 1,
+                        ],
                     ]
                 ],
                 [
