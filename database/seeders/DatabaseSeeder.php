@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             ContactsTableSeeder::class,
             TourCategorySeeder::class,
-            // PefectTourPackagesSeeder::class,
+            HomePageCarouselSeeder::class,
         ]);
     }
 }

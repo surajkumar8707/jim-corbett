@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Enquiry;
 use App\Models\PefectTourPackages;
+use App\Models\HomePageCarousel;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -31,8 +32,10 @@ class FrontEndController extends Controller
             'tour_category_id' => 3,
             'status' => 1,
         ])->get();
+
+        $home_page_carousel = HomePageCarousel::where('status', 1)->orderBy('status', 'DESC')->get();
         // dd($packages->toArray());
-        return view('home', compact('packages', 'tour_packages', 'corbett_packages'));
+        return view('home', compact('packages', 'tour_packages', 'corbett_packages', 'home_page_carousel'));
     }
 
     /**

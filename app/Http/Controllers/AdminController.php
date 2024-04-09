@@ -9,6 +9,7 @@ use App\Models\Enquiry;
 use Illuminate\Http\Request;
 use App\Models\SocialMediaLink;
 use App\Models\PefectTourPackages;
+use App\Models\HomePageCarousel;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -382,8 +383,26 @@ class AdminController extends Controller
 
     public function enquiriesList()
     {
-        $enquiries = Enquiry::get();
+        $enquiries = Enquiry::orderBy('updated_at', "DESC")->get();
         // dd($enquiries->toArray());
         return view('admins.enquiry.index', compact('enquiries'));
     }
+
+    public function homePageCarouselList(){
+        $home_page_carousel = HomePageCarousel::orderBy('status', 'DESC')->get();
+        return view('admins.home_page_carousel.index', compact('home_page_carousel'));
+    }
+
+    public function homePageCarouselCreate(){
+        return view('admins.home_page_carousel.create', compact('enquiries'));
+    }
+
+    public function homePageCarouselStore(Request $request){
+        return view('admins.home_page_carousel.create', compact('enquiries'));
+    }
+
+    public function homePageCarouselEdit($id){
+        return view('admins.home_page_carousel.create', compact('enquiries'));
+    }
+
 }

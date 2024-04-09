@@ -12,52 +12,58 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item @active('admin.dashboard') active @endactive">
-        <a class="nav-link" href="{{ route('admin.dashboard') }}">
+    <li class="nav-item my-0 p-0 @active('admin.dashboard') active @endactive">
+        <a class="nav-link pt-4 px-3" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-
+    {{-- <hr> --}}
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    {{-- <hr class="sidebar-divider"> --}}
+
+    <li class="nav-item @active(['admin.home.page.carousel.list', 'admin.home.page.carousel.create', 'admin.tour.package.edit']) active @endactive">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.home.page.carousel.list') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Home Page Carousel</span></a>
+    </li>
+    <li class="nav-item @active(['admin.tour.package.list', 'admin.tour.package.create', 'admin.tour.package.edit']) active @endactive">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.tour.package.list') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Tour Packages</span></a>
+    </li>
+    <li class="nav-item @active(['admin.contacts']) active @endactive">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.contacts') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Contacts</span></a>
+    </li>
+
+    <li class="nav-item @active(['admin.enquiries.list']) active @endactive">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.enquiries.list') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Enquiries</span></a>
+    </li>
 
     <!-- Heading -->
-    <div class="sidebar-heading">
+    {{-- <div class="sidebar-heading">
         Interface
-    </div>
+    </div> --}}
 
     <li class="nav-item @active(['admin.social.media.show', 'admin.social.media.create', 'admin.social.media.storeOrUpdate']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.social.media.show') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.social.media.show') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Social Media</span></a>
     </li>
 
     <li class="nav-item @active(['admin.app.setting']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.app.setting') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.app.setting') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Setting</span></a>
     </li>
 
     <li class="nav-item @active(['admin.show.profile', 'admin.edit.profile', 'admin.update.profile']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.show.profile') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.show.profile') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Profile</span></a>
-    </li>
-
-    <li class="nav-item @active(['admin.contacts']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.contacts') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Contacts</span></a>
-    </li>
-    <li class="nav-item @active(['admin.tour.package.list', 'admin.tour.package.create', 'admin.tour.package.edit']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.tour.package.list') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Tour Packages</span></a>
-    </li>
-    <li class="nav-item @active(['admin.enquiries.list']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.enquiries.list') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Enquiries</span></a>
     </li>
 
 
@@ -65,25 +71,25 @@
 
 
     <li class="nav-item @active(['admin.bills.list', 'admin.executive-users.create', 'admin.executive-users.edit']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.bills.list') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.bills.list') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Bill Recipt</span></a>
     </li>
 
     <li class="nav-item @active(['admin.bills.generated.bills', 'admin.executive-users.create', 'admin.executive-users.edit']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.bills.generated.bills') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.bills.generated.bills') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Generated Bills</span></a>
     </li>
 
     <li class="nav-item @active(['admin.show.profile', 'admin.edit.profile']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.show.profile') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.show.profile') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Profile</span></a>
     </li>
 
     <li class="nav-item @active(['admin.change.password']) active @endactive">
-        <a class="nav-link" href="{{ route('admin.change.password') }}">
+        <a class="nav-link pt-1 px-3" href="{{ route('admin.change.password') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Change Password</span></a>
     </li> --}}
@@ -155,14 +161,14 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link pt-1 px-3" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link pt-1 px-3" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
     </li> --}}

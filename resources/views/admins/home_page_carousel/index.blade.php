@@ -8,7 +8,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-6">
-                    <h4 class="card-title">Enquiry List</h4>
+                    <h4 class="card-title">Home Page Carousel</h4>
                 </div>
                 <div class="col-md-6 text-right">
                     <a class="btn btn-primary" href="{{ route('admin.tour.package.create') }}">Add +</a>
@@ -21,23 +21,28 @@
                     <thead>
                         <tr>
                             <th>S.No</th>
-                            <th>Details</th>
-                            <th>Message</th>
-                            <th>Enquiry date</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Status</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($enquiries as $key => $enquiry)
+                        @forelse ($home_page_carousel as $key => $carousel)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $carousel->title }}</td>
+                                <td>{{ $carousel->image }}</td>
                                 <td>
-                                    <p class="p-0 m-0">{{ $enquiry->name }}</p>
-                                    <p class="p-0 m-0">{{ $enquiry->email }}</p>
-                                    <p class="p-0 m-0">{{ $enquiry->phone }}</p>
+                                    {{-- <input type="checkbox">
+                                    {{ $carousel->status }} --}}
+                                    <div class="slider-container">
+                                        <input type="checkbox" @if($carousel->status == 1) checked @endif id="checkbox-slider" class="checkbox">
+                                        <label for="checkbox-slider" class="slider"></label>
+                                      </div>
                                 </td>
-                                <td>{{ $enquiry->message }}</td>
                                 <td>
-                                    <span class="badge badge-primary">{{ date('D m Y', strtotime($enquiry->created_at)) }}</span>
+                                    <span class="badge badge-primary">{{ date('D m Y', strtotime($carousel->created_at)) }}</span>
                                 </td>
                             </tr>
                         @empty

@@ -87,5 +87,21 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
             // Route::get("/show/{id}", "tourPackageShow")->name("show");
         });
     });
+
+    Route::group(['prefix' => 'home-page-carousel', 'as' => 'home.page.carousel.'], function () {
+        Route::get("/", [AdminController::class, "homePageCarouselList"])->name("list");
+        Route::get("/create", [AdminController::class, "homePageCarouselCreate"])->name("create");
+
+        Route::controller(AdminController::class)->group(function () {
+
+            // Route::post("/store", "tourPackageStore")->name("store");
+            // Route::get("/edit/{id}", "tourPackageEdit")->name("edit");
+            // Route::post("/update/{id}", "tourPackageUpdate")->name("update");
+            // Route::get("/delete/{id}", "tourPackageDelete")->name("delete");
+            // Route::get("/show/{id}", "tourPackageShow")->name("show");
+        });
+    });
+
+
     // Add other admin routes here...
 });

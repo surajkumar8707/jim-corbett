@@ -16,7 +16,8 @@
     <title>{{ $settings->app_name }}::Admin @yield('title')</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('public/assets/admins/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/assets/admins/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+        type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -34,20 +35,21 @@
             top: 20%;
             opacity: 0.8;
         }
+
         .switch {
             position: relative;
             display: inline-block;
             width: 30px;
             height: 17px;
-            }
+        }
 
-            .switch input {
+        .switch input {
             opacity: 0;
             width: 0;
             height: 0;
-            }
+        }
 
-            .slider {
+        .slider {
             position: absolute;
             cursor: pointer;
             top: 0;
@@ -57,9 +59,9 @@
             background-color: #ccc;
             -webkit-transition: .4s;
             transition: .4s;
-            }
+        }
 
-            .slider:before {
+        .slider:before {
             position: absolute;
             content: "";
             height: 13px;
@@ -69,30 +71,69 @@
             background-color: white;
             -webkit-transition: .4s;
             transition: .4s;
-            }
+        }
 
-            input:checked + .slider {
+        input:checked+.slider {
             background-color: #2196F3;
-            }
+        }
 
-            input:focus + .slider {
+        input:focus+.slider {
             box-shadow: 0 0 1px #2196F3;
-            }
+        }
 
-            input:checked + .slider:before {
+        input:checked+.slider:before {
             -webkit-transform: translateX(13px);
             -ms-transform: translateX(13px);
             transform: translateX(13px);
-            }
+        }
 
-            /* Rounded sliders */
-            .slider.round {
+        /* Rounded sliders */
+        .slider.round {
             border-radius: 17px;
-            }
+        }
 
-            .slider.round:before {
+        .slider.round:before {
             border-radius: 50%;
-            }
+        }
+
+        /* Hide the checkbox */
+        .checkbox {
+            display: none;
+        }
+
+        /* Style the slider */
+        .slider {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            background-color: #ccc;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        /* Style the slider "knob" */
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 21px;
+            width: 21px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+        /* Change the background color of the slider when the checkbox is checked */
+        .checkbox:checked+.slider {
+            background-color: linear-gradient(180deg,#4e73df 10%,#224abe 100%);
+        }
+
+        /* Move the slider "knob" to the right when the checkbox is checked */
+        .checkbox:checked+.slider:before {
+            transform: translateX(25px);
+        }
     </style>
     @stack('style')
 
@@ -191,7 +232,7 @@
     {{-- <script src="{{ asset('public/assets/admins/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('public/assets/admins/js/demo/chart-pie-demo.js') }}"></script> --}}
     @stack('script')
-    @include("admins.layouts.alert-message")
+    @include('admins.layouts.alert-message')
 </body>
 
 </html>

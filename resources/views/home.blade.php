@@ -1,9 +1,78 @@
 @extends('layouts.app')
 
+@push('styles')
+    <style>
+        .rating-container {
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            color: #ffd700;
+            /* Gold color */
+        }
+
+        .star {
+            font-size: 20px;
+        }
+
+        .average-rating {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .review {
+            margin-bottom: 15px;
+        }
+
+        .reviewer {
+            font-weight: bold;
+        }
+
+        .rating {
+            margin-bottom: 5px;
+        }
+
+        .comment {
+            font-style: italic;
+        }
+    </style>
+@endpush
+
 @section('content')
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        @if (count($home_page_carousel) > 0)
+            <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    @forelse ($home_page_carousel as $key => $carousel)
+                        <div class="carousel-item @if ($key == 0) active @endif">
+                            <img class="w-100" src="{{ public_asset($carousel->image) }}" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                                    <h1 class="display-4 text-white mb-md-4">{{ $carousel->title }}</h1>
+                                    <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                    @endforelse
+                    <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-prev-icon mb-n2"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-next-icon mb-n2"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        @else
+        @endif
+        {{-- <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="{{ asset('public/assets/frontend/img/carousel-1.jpg') }}" alt="Image">
@@ -36,7 +105,7 @@
                     <span class="carousel-control-next-icon mb-n2"></span>
                 </div>
             </a>
-        </div>
+        </div> --}}
     </div>
     <!-- Carousel End -->
 
@@ -284,7 +353,9 @@
                                             {{-- <h5 class="m-0">{{ $package->price }} <i class="fa fa-rupee-sign mr-2"></i> </h5> --}}
                                         </div>
                                         <p><strong>Duration: </strong> {{ $package->duration }}</p>
-                                            <p><strong>Price: </strong> {{ $package->price }} <i class="fa fa-rupee-sign mr-2"></i></p>
+                                        <p><strong>Price: </strong> {{ $package->price }} <i
+                                                class="fa fa-rupee-sign mr-2"></i>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -486,4 +557,75 @@
         </div>
     </div>
     <!-- Registration End -->
+
+        <!-- Registration Start -->
+        <div class="container-fluid" style="margin: 90px 0;">
+            <div class="container ">
+                <div class="rating-container">
+                    <div class="stars">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                    </div>
+                    <div class="average-rating">Average Rating: 4.5</div>
+                  </div>
+
+                  <div class="reviews-container">
+                    <div class="review">
+                      <div class="reviewer">John Doe</div>
+                      <div class="rating">Rating: 4.5</div>
+                      <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ante eget libero malesuada vestibulum. Ut feugiat odio nec risus accumsan, nec lobortis sapien condimentum. Donec nec mauris elit.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Jane Smith</div>
+                      <div class="rating">Rating: 5.0</div>
+                      <div class="comment">Integer nec quam vel orci gravida hendrerit. Vivamus a quam sit amet lacus aliquet tristique. Phasellus congue libero sit amet massa sollicitudin, eget consequat justo efficitur.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Michael Johnson</div>
+                      <div class="rating">Rating: 4.0</div>
+                      <div class="comment">Vestibulum convallis orci ut elit mollis, eget venenatis mi laoreet. Proin ac lectus at felis dignissim viverra nec vel ipsum.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Emily Brown</div>
+                      <div class="rating">Rating: 3.5</div>
+                      <div class="comment">Suspendisse potenti. Proin ut nisi a purus tempor interdum. Integer vel nibh sit amet nisl dignissim ullamcorper.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">David Williams</div>
+                      <div class="rating">Rating: 4.5</div>
+                      <div class="comment">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam nec orci vel ante sollicitudin convallis.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Sarah Taylor</div>
+                      <div class="rating">Rating: 5.0</div>
+                      <div class="comment">Aenean sed velit et purus tempus dapibus. Sed vel risus id lectus viverra consectetur. Curabitur sed lacus ut nisl fringilla dapibus ac sed orci.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Christopher Lee</div>
+                      <div class="rating">Rating: 4.0</div>
+                      <div class="comment">Fusce nec nunc vel mi mattis consequat. Proin quis tellus odio. Phasellus id diam vel sem vulputate blandit eget sed justo.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Olivia Martinez</div>
+                      <div class="rating">Rating: 4.5</div>
+                      <div class="comment">Nulla facilisi. Maecenas ac quam at dolor finibus accumsan. Fusce auctor, dui ut sollicitudin fermentum, urna eros lacinia purus, nec ultricies magna nisi nec est.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Daniel Garcia</div>
+                      <div class="rating">Rating: 3.5</div>
+                      <div class="comment">Vestibulum dignissim, mauris at fringilla placerat, libero nulla vestibulum velit, ac vulputate arcu orci vitae ipsum. Etiam malesuada ligula nec felis vehicula.</div>
+                    </div>
+                    <div class="review">
+                      <div class="reviewer">Sophia Clark</div>
+                      <div class="rating">Rating: 4.0</div>
+                      <div class="comment">Donec consectetur, libero et rutrum commodo, odio quam dignissim quam, sit amet lacinia lorem ipsum at lacus.</div>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+        <!-- Registration End -->
 @endsection
