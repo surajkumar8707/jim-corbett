@@ -36,7 +36,18 @@
         .comment {
             font-style: italic;
         }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: green !important;
+            /* Change the color to green */
+        }
     </style>
+
+    <!-- Add CSS/JS links for Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 @endpush
 
 @section('content')
@@ -558,74 +569,205 @@
     </div>
     <!-- Registration End -->
 
-        <!-- Registration Start -->
-        <div class="container-fluid" style="margin: 90px 0;">
-            <div class="container ">
-                <div class="rating-container">
-                    <div class="stars">
-                      <span class="star">&#9733;</span>
-                      <span class="star">&#9733;</span>
-                      <span class="star">&#9733;</span>
-                      <span class="star">&#9733;</span>
-                      <span class="star">&#9733;</span>
-                    </div>
-                    <div class="average-rating">Average Rating: 4.5</div>
-                  </div>
+    <!-- Registration Start -->
+    <div class="container-fluid" style="margin: 90px 0;">
+        <div class="container ">
+            {{-- <div class="rating-container">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <div class="average-rating">Average Rating: 4.5</div>
+            </div>
 
-                  <div class="reviews-container">
-                    <div class="review">
-                      <div class="reviewer">John Doe</div>
-                      <div class="rating">Rating: 4.5</div>
-                      <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ante eget libero malesuada vestibulum. Ut feugiat odio nec risus accumsan, nec lobortis sapien condimentum. Donec nec mauris elit.</div>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="reviewer">John Doe</div>
+                    <div class="rating">Rating: 4.5</div>
+                    <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ante eget
+                        libero malesuada vestibulum. Ut feugiat odio nec risus accumsan, nec lobortis sapien condimentum.
+                        Donec nec mauris elit.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Jane Smith</div>
+                    <div class="rating">Rating: 5.0</div>
+                    <div class="comment">Integer nec quam vel orci gravida hendrerit. Vivamus a quam sit amet lacus aliquet
+                        tristique. Phasellus congue libero sit amet massa sollicitudin, eget consequat justo efficitur.
                     </div>
-                    <div class="review">
-                      <div class="reviewer">Jane Smith</div>
-                      <div class="rating">Rating: 5.0</div>
-                      <div class="comment">Integer nec quam vel orci gravida hendrerit. Vivamus a quam sit amet lacus aliquet tristique. Phasellus congue libero sit amet massa sollicitudin, eget consequat justo efficitur.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Michael Johnson</div>
-                      <div class="rating">Rating: 4.0</div>
-                      <div class="comment">Vestibulum convallis orci ut elit mollis, eget venenatis mi laoreet. Proin ac lectus at felis dignissim viverra nec vel ipsum.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Emily Brown</div>
-                      <div class="rating">Rating: 3.5</div>
-                      <div class="comment">Suspendisse potenti. Proin ut nisi a purus tempor interdum. Integer vel nibh sit amet nisl dignissim ullamcorper.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">David Williams</div>
-                      <div class="rating">Rating: 4.5</div>
-                      <div class="comment">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam nec orci vel ante sollicitudin convallis.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Sarah Taylor</div>
-                      <div class="rating">Rating: 5.0</div>
-                      <div class="comment">Aenean sed velit et purus tempus dapibus. Sed vel risus id lectus viverra consectetur. Curabitur sed lacus ut nisl fringilla dapibus ac sed orci.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Christopher Lee</div>
-                      <div class="rating">Rating: 4.0</div>
-                      <div class="comment">Fusce nec nunc vel mi mattis consequat. Proin quis tellus odio. Phasellus id diam vel sem vulputate blandit eget sed justo.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Olivia Martinez</div>
-                      <div class="rating">Rating: 4.5</div>
-                      <div class="comment">Nulla facilisi. Maecenas ac quam at dolor finibus accumsan. Fusce auctor, dui ut sollicitudin fermentum, urna eros lacinia purus, nec ultricies magna nisi nec est.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Daniel Garcia</div>
-                      <div class="rating">Rating: 3.5</div>
-                      <div class="comment">Vestibulum dignissim, mauris at fringilla placerat, libero nulla vestibulum velit, ac vulputate arcu orci vitae ipsum. Etiam malesuada ligula nec felis vehicula.</div>
-                    </div>
-                    <div class="review">
-                      <div class="reviewer">Sophia Clark</div>
-                      <div class="rating">Rating: 4.0</div>
-                      <div class="comment">Donec consectetur, libero et rutrum commodo, odio quam dignissim quam, sit amet lacinia lorem ipsum at lacus.</div>
-                    </div>
-                  </div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Michael Johnson</div>
+                    <div class="rating">Rating: 4.0</div>
+                    <div class="comment">Vestibulum convallis orci ut elit mollis, eget venenatis mi laoreet. Proin ac
+                        lectus at felis dignissim viverra nec vel ipsum.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Emily Brown</div>
+                    <div class="rating">Rating: 3.5</div>
+                    <div class="comment">Suspendisse potenti. Proin ut nisi a purus tempor interdum. Integer vel nibh sit
+                        amet nisl dignissim ullamcorper.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">David Williams</div>
+                    <div class="rating">Rating: 4.5</div>
+                    <div class="comment">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                        turpis egestas. Nam nec orci vel ante sollicitudin convallis.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Sarah Taylor</div>
+                    <div class="rating">Rating: 5.0</div>
+                    <div class="comment">Aenean sed velit et purus tempus dapibus. Sed vel risus id lectus viverra
+                        consectetur. Curabitur sed lacus ut nisl fringilla dapibus ac sed orci.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Christopher Lee</div>
+                    <div class="rating">Rating: 4.0</div>
+                    <div class="comment">Fusce nec nunc vel mi mattis consequat. Proin quis tellus odio. Phasellus id diam
+                        vel sem vulputate blandit eget sed justo.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Olivia Martinez</div>
+                    <div class="rating">Rating: 4.5</div>
+                    <div class="comment">Nulla facilisi. Maecenas ac quam at dolor finibus accumsan. Fusce auctor, dui ut
+                        sollicitudin fermentum, urna eros lacinia purus, nec ultricies magna nisi nec est.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Daniel Garcia</div>
+                    <div class="rating">Rating: 3.5</div>
+                    <div class="comment">Vestibulum dignissim, mauris at fringilla placerat, libero nulla vestibulum velit,
+                        ac vulputate arcu orci vitae ipsum. Etiam malesuada ligula nec felis vehicula.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Sophia Clark</div>
+                    <div class="rating">Rating: 4.0</div>
+                    <div class="comment">Donec consectetur, libero et rutrum commodo, odio quam dignissim quam, sit amet
+                        lacinia lorem ipsum at lacus.</div>
+                </div>
+            </div> --}}
 
+            <div class="rating-container">
+                <div class="stars">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+                <div class="average-rating">Average Rating: 4.5</div>
+            </div>
+
+            <div class="reviews-slider">
+                <div class="review">
+                    <div class="reviewer">John Doe</div>
+                    <div class="rating">Rating: 4.5</div>
+                    <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ante eget
+                        libero
+                        malesuada vestibulum. Ut feugiat odio nec risus accumsan, nec lobortis sapien condimentum. Donec nec
+                        mauris elit.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Jane Smith</div>
+                    <div class="rating">Rating: 5.0</div>
+                    <div class="comment">Integer nec quam vel orci gravida hendrerit. Vivamus a quam sit amet lacus aliquet
+                        tristique. Phasellus congue libero sit amet massa sollicitudin, eget consequat justo efficitur.
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Michael Johnson</div>
+                    <div class="rating">Rating: 4.0</div>
+                    <div class="comment">Vestibulum convallis orci ut elit mollis, eget venenatis mi laoreet. Proin ac
+                        lectus
+                        at felis dignissim viverra nec vel ipsum.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Emily Brown</div>
+                    <div class="rating">Rating: 3.5</div>
+                    <div class="comment">Suspendisse potenti. Proin ut nisi a purus tempor interdum. Integer vel nibh sit
+                        amet
+                        nisl dignissim ullamcorper.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">David Williams</div>
+                    <div class="rating">Rating: 4.5</div>
+                    <div class="comment">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                        turpis
+                        egestas. Nam nec orci vel ante sollicitudin convallis.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Sarah Taylor</div>
+                    <div class="rating">Rating: 5.0</div>
+                    <div class="comment">Aenean sed velit et purus tempus dapibus. Sed vel risus id lectus viverra
+                        consectetur.
+                        Curabitur sed lacus ut nisl fringilla dapibus ac sed orci.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Christopher Lee</div>
+                    <div class="rating">Rating: 4.0</div>
+                    <div class="comment">Fusce nec nunc vel mi mattis consequat. Proin quis tellus odio. Phasellus id diam
+                        vel
+                        sem vulputate blandit eget sed justo.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Olivia Martinez</div>
+                    <div class="rating">Rating: 4.5</div>
+                    <div class="comment">Nulla facilisi. Maecenas ac quam at dolor finibus accumsan. Fusce auctor, dui ut
+                        sollicitudin fermentum, urna eros lacinia purus, nec ultricies magna nisi nec est.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Daniel Garcia</div>
+                    <div class="rating">Rating: 3.5</div>
+                    <div class="comment">Vestibulum dignissim, mauris at fringilla placerat, libero nulla vestibulum velit,
+                        ac
+                        vulputate arcu orci vitae ipsum. Etiam malesuada ligula nec felis vehicula.</div>
+                </div>
+                <div class="review">
+                    <div class="reviewer">Sophia Clark</div>
+                    <div class="rating">Rating: 4.0</div>
+                    <div class="comment">Donec consectetur, libero et rutrum commodo, odio quam dignissim quam, sit amet
+                        lacinia lorem ipsum at lacus.</div>
+                </div>
             </div>
         </div>
-        <!-- Registration End -->
+
+    </div>
+    <!-- Registration End -->
 @endsection
+
+
+@push('scripts')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.reviews-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500, // Increased animation speed for smoother transitions
+                slidesToShow: 1,
+                slidesToScroll: 1, // Scroll one item at a time
+                autoplay: true, // Auto-play the slider
+                autoplaySpeed: 5000, // Set autoplay speed to 5 seconds
+                arrows: true, // Show arrows for navigation
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>', // Custom prev arrow
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>', // Custom next arrow
+                fade: true, // Enable fade effect for a smoother transition
+                cssEase: 'linear', // Use linear easing for the fade effect
+                adaptiveHeight: true,
+                responsive: [ // Customize settings for different screen sizes
+                    {
+                        breakpoint: 768, // Apply these settings for screens smaller than 768px
+                        settings: {
+                            arrows: false, // Hide arrows for navigation
+                            dots: true // Show dots for navigation
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+@endpush
