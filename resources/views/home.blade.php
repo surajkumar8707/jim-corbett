@@ -183,66 +183,56 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-thumbnail" src="{{ public_asset('assets/frontend/img/hanuman_dham.jpg') }}"
+                        <img class="center w-100" class="img-thumbnail" src="{{ public_asset("assets/images/garjiya_temple.jpg") }}"
                             alt="">
                     </div>
                     <div class="col-md-6">
-                        <h5>Shri Hanuman Dham Ramnagar: A Haven of Devotion</h5>
+                        <h5>Garjiya Devi Temple</h5>
                         <p class="py-2 text-justify" style="text-indent: 50px;">
-                            Shri Hanuman Dham, nestled in the serene town of Ramnagar, Uttarakhand, stands as a revered
-                            sanctuary dedicated to Lord Hanuman, the epitome of devotion and strength in Hindu mythology.
-                            This sacred temple, adorned with intricate carvings and vibrant colors, beckons devotees from
-                            far and wide to seek solace, blessings, and spiritual fulfillment.
-                        </p>
+                            Garjiya Devi Temple, situated on the banks of the Kosi River near Ramnagar in Uttarakhand,
+                            India, is a revered Hindu sanctuary dedicated to Goddess Parvati, known as Garjiya Devi. Rooted
+                            in mythology and folklore, the temple serves as a significant pilgrimage site attracting
+                            devotees, pilgrims, and tourists seeking spiritual blessings and solace.
+                            According to legend, the temple's inception is attributed to Muni Anand, a sage who purportedly
+                            discovered an idol of Goddess Parvati submerged in the waters of the Kosi River. This auspicious
+                            find led to the construction of the temple, which subsequently evolved into a sacred place of
+                            worship and reverence.
+                            The allure of Garjiya Devi Temple extends beyond its religious significance, as it is nestled
+                            amidst the verdant Kumaon hills, offering visitors a scenic retreat. The suspension bridge
+                            spanning the river further enhances the pilgrimage experience, providing breathtaking views of
+                            the tranquil surroundings.
+                            Throughout the year, devotees congregate at the temple, with heightened fervour during festivals
+                            such as Navratri and Kartik Poornima, to partake in special prayers and rituals. Garjiya Devi
+                            Temple epitomizes faith, cultural heritage, and natural splendour, inviting all to bask in its
+                            divine aura and serene ambiance.
 
-                        <h5>Divine Presence</h5>
-                        <p class="py-2 text-justify" style="text-indent: 50px;">
-                            At the heart of Shri Hanuman Dham lies the sanctum sanctorum, where the divine idol of Lord
-                            Hanuman resides. Devotees gather here in reverent silence, offering prayers, flowers, and sacred
-                            offerings to the beloved deity. The presence of Lord Hanuman fills the air with a sense of peace
-                            and tranquility, instilling devotees with courage, faith, and devotion.
                         </p>
                     </div>
                 </div>
 
-                <h5>Spiritual Practices</h5>
-                <p class="py-2 text-justify" style="text-indent: 50px;">
-                    Throughout the day, the temple resonates with the sounds of sacred chants and devotional songs,
-                    as priests perform rituals and ceremonies to honor Lord Hanuman. Devotees participate in
-                    spiritual practices such as aarti (offering of light) and bhajans (devotional songs), deepening
-                    their connection with the divine and seeking his blessings.
+                <h5>why to famous of Garjiya Devi, temple</h5>
+                <p class="py-2 text-justify">
+                    <strong>1. &nbsp;&nbsp;	Religious Significance: </strong>Garjiya Devi Temple holds profound reverence among Hindu devotees, dedicated to Goddess Parvati, revered as Garjiya Devi. Pilgrims flock to this sacred site to seek blessings for prosperity, protection, and the fulfilment of their desires.
                 </p>
 
-                <h5>Festivals and Celebrations</h5>
-                <p class="py-2 text-justify" style="text-indent: 50px;">
-                    Shri Hanuman Dham comes alive during festivals dedicated to Lord Hanuman, such as Hanuman Jayanti.
-                    Devotees gather in large numbers to celebrate the auspicious occasion, offering prayers and seeking the
-                    blessings of the mighty monkey god. The temple is adorned with decorations, and the air is filled with
-                    the sounds of joyous chants and devotional fervor.
+                <p class="py-2 text-justify">
+                    <strong>2. &nbsp;&nbsp;	Mythological Legend: </strong> Rooted in local folklore, the temple's origins are attributed to the discovery of an idol of Goddess Parvati submerged in the waters of the Kosi River by the sage Muni Anand. This auspicious finding led to the establishment of the temple, which has since become a revered sanctuary of worship.
                 </p>
 
-                <h5>Community Engagement</h5>
-                <p class="py-2 text-justify" style="text-indent: 50px;">
-                    Beyond its role as a place of worship, Shri Hanuman Dham actively engages with the local community,
-                    offering social welfare initiatives and charitable activities. From providing meals to the needy to
-                    organizing health camps, the temple serves as a beacon of compassion and service, embodying the
-                    teachings of Lord Hanuman.
+                <p class="py-2 text-justify">
+                    <strong>3. &nbsp;&nbsp;	Scenic Location: </strong>Situated atop a small hillock amidst the picturesque landscape of the Kumaon hills, Garjiya Devi Temple offers captivating vistas of the Kosi River and verdant forests. Its scenic splendour enhances its allure, drawing not only pilgrims but also nature enthusiasts and tourists seeking serene surroundings.
                 </p>
 
-                <h5>Source of Inspiration</h5>
-                <p class="py-2 text-justify" style="text-indent: 50px;">
-                    For devotees, Shri Hanuman Dham is a source of inspiration and strength in times of need. The divine
-                    presence of Lord Hanuman instills courage, faith, and devotion, enabling devotees to face life's
-                    challenges with grace and resilience. Each visit to the temple deepens their spiritual connection with
-                    the beloved deity, reaffirming their belief in his boundless love and protection.
+                <p class="py-2 text-justify">
+                    <strong>4. &nbsp;&nbsp;	Cultural Importance: </strong>Integral to the cultural fabric of the Kumaon region, Garjiya Devi Temple holds significance in religious festivities such as Navratri and Kartik Poornima. These occasions witness fervent participation in special prayers and rituals, underscoring the temple's cultural relevance and spiritual significance.
                 </p>
 
-                <h5>Conclusion</h5>
-                <p class="py-2 text-justify" style="text-indent: 50px;">
-                    In the tranquil surroundings of Ramnagar, Shri Hanuman Dham stands as a beacon of devotion and faith,
-                    drawing devotees into its sacred embrace. With its divine presence, spiritual practices, and festive
-                    celebrations, the temple serves as a haven of solace and inspiration for all who seek the blessings of
-                    Lord Hanuman.
+                <p class="py-2 text-justify">
+                    <strong>5. &nbsp;&nbsp;	Hanging Bridge: </strong>A notable feature enhancing the renown of Garjiya Devi Temple is its hanging bridge, which traverses the Kosi River and provides access to the temple grounds. Crossing this bridge is regarded as an integral aspect of the pilgrimage, offering visitors an adventurous element to their spiritual journey.
+                </p>
+
+                <p class="py-2 text-justify">
+                    <strong>6. &nbsp;&nbsp;	Tourist Attraction: </strong>Beyond its religious importance, Garjiya Devi Temple serves as a prominent tourist attraction. Visitors are captivated not only by the temple's spiritual ambiance but also by its architectural elegance and the scenic grandeur of its environs.
                 </p>
             </div>
         </div>
