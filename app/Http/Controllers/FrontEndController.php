@@ -126,7 +126,12 @@ class FrontEndController extends Controller
      */
     public function resorts()
     {
-        return view('resorts');
+        $packages = PefectTourPackages::where([
+            'tour_category_id' => 2,
+            'status' => 1,
+        ])->get();
+        // dd($packages);
+        return view('resorts' , compact('packages'));
     }
 
     /**
