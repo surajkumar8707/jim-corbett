@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Page Header -->
-    <div class="container-fluid page-header">
+    <div class="container-fluid page-header" style="">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-4 text-white text-uppercase">Jungle Safari</h3>
@@ -79,6 +79,47 @@
             </div>
         </div>
     </div> --}}
+
+        <div class="container-fluid">
+            <img class="w-100" src="{{ public_asset('assets/images/Corbett Banner_0.jpg') }}" alt="">
+        </div>
+        <center class="my-3">
+            <h1 class="text-primary">Jungle safari</h1>
+        </center>
+
+        <div class="">
+            <p>
+                Ramnagar, nestled in Uttarakhand, India, is renowned as the gateway to Jim Corbett National Park, one of
+                India's oldest and most esteemed national parks.
+                Venturing on a jungle safari from Ramnagar into Jim Corbett National Park presents a distinctive chance to
+                delve into the lush biodiversity of the Himalayan foothills. The park harbors a plethora of flora and fauna,
+                featuring the regal Bengal tiger, Asian elephants, leopards, sloth bears, and an array of avian species.
+                As you journey into the park, whether aboard a jeep or an elephant for safari, you'll navigate through dense
+                forests, winding rivers, and open grasslands, all while scanning for glimpses of wildlife. Accompanied by
+                knowledgeable guides and naturalists, you'll gain insights into the park's ecosystem, its inhabitants, and
+                the ongoing conservation initiatives aimed at safeguarding them.
+
+            </p>
+
+            <p>
+                In addition to wildlife safaris, tourists in Ramnagar can delight in activities such as birdwatching, nature
+                strolls, and delving into the cultural heritage of the area. With its breathtaking landscapes and thriving
+                wildlife, a jungle safari in Ramnagar ensures an unforgettable adventure amidst the marvels of nature.
+            </p>
+
+            <ol>
+                <li>Ramnagar acts as the entrance to Jim Corbett National Park, one of India's oldest and most renowned national parks.</li>
+                <li>Jungle safaris in Ramnagar provide an opportunity for visitors to discover the varied flora and fauna of the Himalayan foothills.</li>
+                <li>The park is celebrated for its Bengal tiger population, alongside other wildlife such as elephants, leopards, sloth bears, and diverse bird species.</li>
+                <li>Safaris are conducted through different means, including jeep, elephant-back, and walking safaris, each offering a distinct perspective of the park.</li>
+                <li>Experienced guides and naturalists accompany visitors on safaris, offering insights into the park's ecosystem and wildlife behavior.</li>
+                <li>The park's diverse terrain encompasses dense forests, rivers, and grassy plains, creating diverse habitats for its residents.</li>
+                <li>Wildlife enthusiasts can experience exhilarating encounters with iconic species like the Bengal tiger, while observing numerous other animals in their natural habitats.</li>
+                <li>Birdwatching is a popular activity, with the park hosting a multitude of bird species, both resident and migratory.</li>
+                <li>Visitors can immerse themselves in nature's tranquility, escaping the urban hustle and bustle, while contributing to ecotourism and conservation efforts.</li>
+                <li>Alongside safaris, Ramnagar offers opportunities for nature walks, cultural exploration, culinary experiences, and admiring the scenic beauty of the surroundings.</li>
+            </ol>
+        </div>
 
         <center>
             <h1 class="text-primary">Jungle Safari Price And Zones</h1>
@@ -273,6 +314,54 @@
                         alt="">
                 </div>
 
+            </div>
+            <center class="my-4">
+                <h1 class="text-primary">Why to famous jungle safaris ramnagar</h1>
+            </center>
+            <div class="">
+                <p>
+                    Renowned as the gateway to Jim Corbett National Park, one of India's oldest and most renowned national parks, Ramnagar in Uttarakhand, India, is celebrated for its jungle safaris. Here's why these safaris are famous:
+                </p>
+
+                <p>
+                    <strong>1.	Tiger Reserve: </strong> Jim Corbett National Park, designated as a tiger reserve, offers one of India's premier opportunities to witness the majestic Bengal tiger in its natural environment.
+                </p>
+                <p>
+                    <strong>2.	Rich Biodiversity: </strong> The park boasts a diverse array of flora and fauna, comprising various mammal species, birds, reptiles, and insects. Alongside tigers, visitors may encounter Asian elephants, leopards, sloth bears, deer, and a multitude of bird species.
+                </p>
+
+                <p>
+                    <strong>3.	Scenic Landscapes: </strong> Encompassing varied terrain such as dense forests, grasslands, riverine belts, and hilly expanses, the park presents breathtaking vistas and distinctive wildlife habitats.
+                </p>
+
+                <p>
+                    <strong>4.	Variety of Safari Options:</strong>  Visitors can select from multiple safari choices, including jeep safaris, elephant safaris, and canter safaris, each offering a unique perspective on the park's wildlife and landscapes.
+                </p>
+
+                <p>
+                    <strong>5.	Experienced Guides: </strong> Accompanying safari expeditions are knowledgeable naturalists and guides, providing valuable insights into the park's ecology, wildlife behaviour, and conservation initiatives.
+                </p>
+
+                <p>
+                    <strong>6.	Birdwatching Paradise: </strong> With over 600 bird species documented, the park is a paradise for birdwatchers, showcasing both resident and migratory birds, including eagles, vultures, owls, waterfowl, and more.
+                </p>
+
+                <p>
+                    <strong>7.	Adventure and Thrills : </strong> Jungle safaris in Jim Corbett National Park promise adventure and excitement as visitors traverse rugged terrain, ford rivers, and navigate dense forests in search of wildlife sightings.
+                </p>
+
+                <p>
+                    <strong>8.	Conservation Legacy: </strong> With a rich conservation heritage as one of India's oldest national parks, Jim Corbett plays a pivotal role in safeguarding endangered species and preserving their natural habitats.
+                </p>
+
+                <p>
+                    <strong>9.	Nature Photography: </strong> The park's picturesque landscapes and diverse wildlife offer abundant opportunities for nature photographers to capture stunning images of wildlife, scenery, and natural wonders.
+                </p>
+                <p>
+                    <strong>10.	Cultural Experience: </strong> Beyond wildlife encounters, visitors can delve into the cultural heritage of the region, engaging with local communities, exploring nearby villages, and savouring traditional cuisine and customs.
+                </p>
+
+                <p>These factors contribute to the renowned status of jungle safaris in Ramnagar, especially within Jim Corbett National Park, drawing wildlife enthusiasts, nature lovers, and adventure seekers from across the globe.</p>
             </div>
         </div>
     </div>

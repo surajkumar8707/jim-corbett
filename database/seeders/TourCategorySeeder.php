@@ -22,7 +22,7 @@ class TourCategorySeeder extends Seeder
                         [
                             // 'tour_category_id' => 2,
                             'name' => 'Jeep Safari Online Booking & Tariff - Jim Corbett National Park',
-                            'description' => "Welcome to Jeep Safari Booking to Jim Corbett National Park. Visitors can book online Jeep Safari for five different zones of the park namely Bijrani, Jhirna, Dhikala, Dhela, Corbett Landscape (Sitabani) and Durgadevi. All the procedures of Jeep Safari Booking at Corbett are managed by the forest government officials as per the guidelines of India's forest department",
+                            'description' => "Embark on an unforgettable adventure with our Jeep Safari Online Booking service at Jim Corbett National Park. Our easy-to-use platform lets you secure your safari experience effortlessly, offering various tariff options to fit every budget. Explore Corbett's diverse landscapes and wildlife, from the dense forests of Dhikala to the grasslands of Bijrani, guided by experienced experts. Capture breathtaking moments of wildlife sightings and birdwatching while ensuring your safety aboard our specially equipped jeeps. Whether you're a solo traveller or with friends and family, a Jeep Safari in Jim Corbett National Park promises an exhilarating journey into the heart of the wild. Book online now and get ready for an adventure like no other.",
                             'images' => 'assets/frontend/img/packages/jeep-safari_01.webp',
                             'price' => 6500,
                             'duration' => 'Night',
@@ -36,7 +36,7 @@ class TourCategorySeeder extends Seeder
                         [
                             // 'tour_category_id' => 2,
                             'name' => 'Elephant Safari Online Booking & Tariff - Jim Corbett National Park',
-                            'description' => "Welcome to Elephant Safari Booking to Corbett National Park. Visitors can book online Elephant Safari for Reserve Zone of Corbett National park. Corbett National Park visit without elephant safari means your tour is not complete.",
+                            'description' => "Explore the majestic wilderness of Jim Corbett National Park with our Elephant Safari Online Booking service. Immerse yourself in nature aboard our gentle giants, guided by skilled mahouts through the park's lush forests and grasslands. Our hassle-free online platform offers a range of tariffs to suit every budget. Encounter Corbett's rich biodiversity, from towering elephants to elusive tigers, while enjoying a unique perspective from atop these magnificent creatures. Capture unforgettable moments and immerse yourself in the jungle's sights and sounds, all while ensuring your safety and comfort. Whether you're a wildlife enthusiast, a nature lover, or seeking adventure, an Elephant Safari in Jim Corbett National Park promises an enchanting experience. Book your safari online today and venture into the heart of India's wilderness.",
                             'images' => 'assets/frontend/img/packages/banner-image-3.webp',
                             'price' =>  3500,
                             'duration' => 'Day',
@@ -50,7 +50,7 @@ class TourCategorySeeder extends Seeder
                         [
                             // 'tour_category_id' => 2,
                             'name' => 'Dhikala Canter Safari Online Booking & Tariff - Jim Corbett National Park',
-                            'description' => "Welcome to Elephant Safari Booking to Corbett National Park. Visitors can book online Elephant Safari for Reserve Zone of Corbett National park. Corbett National Park visit without elephant safari means your tour is not complete.",
+                            'description' => "Experience an exhilarating adventure through the captivating landscapes of Jim Corbett National Park with our Dhikala Canter Safari Online Booking service. Discover the wilderness from the comfort of our spacious canters, accompanied by expert guides who reveal the secrets of the forest. Our user-friendly online platform ensures seamless reservation with a range of tariff options to cater to every budget. Traverse Corbett's diverse terrain, from dense forests to expansive grasslands, and encounter a plethora of wildlife species along the way. Capture captivating moments of wildlife sightings and immerse yourself in the park's natural beauty while prioritizing your safety and enjoyment throughout the safari. Whether you're traveling solo, with a partner, or accompanied by friends and family, a Dhikala Canter Safari guarantees an unforgettable journey into the heart of India's oldest national park. Book your safari online today and get ready for the adventure of a lifetime.",
                             'images' => 'assets/frontend/img/packages/banner-image-2.webp',
                             'price' =>  2500.00,
                             'duration' => 'Per Person, Available today',
@@ -64,7 +64,7 @@ class TourCategorySeeder extends Seeder
                         [
                             // 'tour_category_id' => 2,
                             'name' => 'Night Stay Accommodation Online Booking & Tariff - Jim Corbett National Park',
-                            'description' => "Welcome to Night Stay Accommodation Booking to Corbett National Park. Visitors can book online Night Stay Accommodation for different zones of Corbett National park namely Dhikala - Bijrani - Jhirna - Sonanadi - Durgadevi - Dhela. All the procedures of Night Stay Accommodation Booking at Corbett are managed by the forest officials as per the guidelines of India's forest department. Please note that we cannot influence the night stay accommodation zone, night stay accommodation, safari driver and the naturalist guide as it is not in our hand. It is solely decided by the forest officials.",
+                            'description' => "Experience the enchantment of the wilderness beneath the starry sky with our Night Stay Accommodation Online Booking service in Jim Corbett National Park. Immerse yourself in the serenity of nature as you reserve your stay amidst the park's tranquil surroundings. Our online platform provides convenient booking options with diverse tariffs to suit every traveller’s preferences and budget. Choose from a variety of accommodation options, including cozy forest lodges, luxurious resorts, and charming cottages, each offering a unique blend of comfort and relaxation. Whether you seek a secluded retreat or a lively ambiance, our night stay accommodations cater to all tastes. Delight in delectable local cuisine, unwind by a crackling bonfire, and revel in the nocturnal symphony of the jungle. Book your night stay accommodation online today and prepare for an enchanting sojourn in the heart of India's wilderness.",
                             'images' => 'assets/frontend/img/packages/banner-image-1.webp',
                             'price' =>  2500.00,
                             'duration' => 'Per Person, Available today',
