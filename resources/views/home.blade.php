@@ -183,7 +183,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="center w-100" class="img-thumbnail" src="{{ public_asset("assets/images/garjiya_temple.jpg") }}"
+                        <img class="w-100" class="img-thumbnail" src="{{ public_asset("assets/images/garjiya_temple.jpg") }}"
                             alt="">
                     </div>
                     <div class="col-md-6">
