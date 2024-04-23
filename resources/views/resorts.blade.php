@@ -45,7 +45,7 @@
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         {{-- <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6> --}}
-                                        <h5 class="m-0">{{ $package->price }} <i class="fa fa-rupee-sign  mr-2"></i>
+                                        <h5 class="m-0"><i class="fa fa-rupee-sign"></i> {{ $package->price }}
                                         </h5>
                                     </div>
                                 </div>

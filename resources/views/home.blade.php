@@ -183,8 +183,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="w-100" class="img-thumbnail" src="{{ public_asset("assets/images/garjiya_temple.jpg") }}"
-                            alt="">
+                        <img class="w-100" class="img-thumbnail"
+                            src="{{ public_asset('assets/images/garjiya_temple.jpg') }}" alt="">
                     </div>
                     <div class="col-md-6">
                         <h5>Garjiya Devi Temple</h5>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <h5>why to famous of Garjiya Devi, temple</h5>
+                {{-- <h5>why to famous of Garjiya Devi, temple</h5>
                 <p class="py-2 text-justify">
                     <strong>1. &nbsp;&nbsp;	Religious Significance: </strong>Garjiya Devi Temple holds profound reverence among Hindu devotees, dedicated to Goddess Parvati, revered as Garjiya Devi. Pilgrims flock to this sacred site to seek blessings for prosperity, protection, and the fulfilment of their desires.
                 </p>
@@ -233,7 +233,7 @@
 
                 <p class="py-2 text-justify">
                     <strong>6. &nbsp;&nbsp;	Tourist Attraction: </strong>Beyond its religious importance, Garjiya Devi Temple serves as a prominent tourist attraction. Visitors are captivated not only by the temple's spiritual ambiance but also by its architectural elegance and the scenic grandeur of its environs.
-                </p>
+                </p> --}}
             </div>
         </div>
     </div>
@@ -270,8 +270,8 @@
                                             class="fa fa-calendar-alt text-primary mr-2"></i>{{ $package->duration }}</small>
                                     {{-- <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small> --}}
                                 </div>
-                                <a class="h5 text-decoration-none"
-                                    href="{{ route('package.show', $package->id) }}">{{ $package->name }}</a>
+                                <a class="h5 text-decoration-none" href="{{ route('package.show', $package->id) }}">{{ $package->name }}</a>
+                                {{-- <p>{{ substr($package->description, 0,50) }}</p> --}}
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         {{-- @for ($i = 0; $i < 5; $i++)
@@ -289,7 +289,7 @@
                                             4
                                             <small>(1250)</small>
                                         </h6>
-                                        <h5 class="m-0">{{ $package->price }} <i class="fa fa-rupee-sign  mr-2"></i>
+                                        <h5 class="m-0"><i class="fa fa-rupee-sign  mr-2"> {{ $package->price }}</i>
                                         </h5>
                                     </div>
                                 </div>
@@ -322,40 +322,20 @@
                 </p>
 
                 <div class="row">
-                    {{-- <div class="col-md-4 my-2">
-                        <img class="img-thumbnail" src="{{ public_asset('assets/frontend/img/jim-corbett.jpg') }}"
-                            alt="">
-                    </div>
-                    <div class="col-md-4 my-2">
-                        <img class="img-thumbnail" src="{{ public_asset('assets/frontend/img/jim-corbett.jpg') }}"
-                            alt="">
-                    </div> --}}
-                    {{-- <div class="col-md-4 my-2">
-                        <img class="img-thumbnail" src="{{ public_asset('assets/frontend/img/jim-corbett.jpg') }}"
-                            alt="">
-                    </div> --}}
 
                     @forelse ($corbett_packages as $key => $package)
-                        {{-- @dd($package) --}}
                         <div class="col-md-3 col-sm-6 mb-4">
                             <div class="package-item bg-white mb-2">
                                 <img class="img-fluid" src="{{ public_asset($package->images) }}" alt="">
                                 <div class="p-4">
-                                    {{-- <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i
-                                                class="fa fa-calendar-alt text-primary mr-2"></i>{{ $package->duration }}</small>
-                                    </div> --}}
                                     <a class="h3 text-decoration-none"
                                         href="{{ route('package.show', $package->id) }}">{{ $package->name }}</a>
                                     <div class="border-top mt-4 pt-4">
                                         <div class="d-flex justify-content-between">
                                             <p>{{ $package->description }}</p>
-                                            {{-- <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6> --}}
-                                            {{-- <h5 class="m-0">{{ $package->price }} <i class="fa fa-rupee-sign mr-2"></i> </h5> --}}
                                         </div>
                                         <p><strong>Duration: </strong> {{ $package->duration }}</p>
-                                        <p><strong>Price: </strong> {{ $package->price }} <i
-                                                class="fa fa-rupee-sign mr-2"></i>
+                                        <p><strong>Price: </strong><i class="fa fa-rupee-sign"></i> {{ $package->price }}
                                         </p>
                                     </div>
                                 </div>
@@ -369,7 +349,6 @@
     </div>
     <!-- Animal Most like end -->
 
-
     <!-- Service Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
@@ -382,30 +361,34 @@
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est
-                            amet labore</p>
+                        <p class="m-0">Explore the wilderness of Jim Corbett National Park with our knowledgeable and
+                            experienced local travel guides. From spotting elusive tigers to discovering hidden trails, our
+                            guides ensure an unforgettable wildlife experience.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
                         <h5 class="mb-2">Ticket Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est
-                            amet labore</p>
+                        <p class="m-0">Skip the hassle of long queues and book your tickets to Jim Corbett National Park
+                            effortlessly through our online booking platform. Enjoy a seamless reservation process and
+                            secure your entry to this enchanting wildlife sanctuary.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                        <h5 class="mb-2">Hotel Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est
-                            amet labore</p>
+                        <h5 class="mb-2">Hotel Accommodation</h5>
+                        <p class="m-0">Indulge in ultimate comfort and relaxation by booking your stay at our premium
+                            selection of hotels and resorts near Jim Corbett National Park. Experience unparalleled
+                            hospitality amidst the serene beauty of nature.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Service End -->
+
 
 
     <!-- Packages Start -->
@@ -433,7 +416,7 @@
                                 <div class="border-top mt-4 pt-4">
                                     <div class="d-flex justify-content-between">
                                         {{-- <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6> --}}
-                                        <h5 class="m-0">{{ $package->price }} <i class="fa fa-rupee-sign  mr-2"></i>
+                                        <h5 class="m-0"><i class="fa fa-rupee-sign"></i> {{ $package->price }}
                                         </h5>
                                     </div>
                                 </div>
@@ -559,171 +542,6 @@
     </div>
     <!-- Registration End -->
 
-    <!-- Registration Start -->
-    <div class="container-fluid" style="margin: 90px 0;">
-        <div class="container ">
-            {{-- <div class="rating-container">
-                <div class="stars">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                </div>
-                <div class="average-rating">Average Rating: 4.5</div>
-            </div>
-
-            <div class="reviews-container">
-                <div class="review">
-                    <div class="reviewer">John Doe</div>
-                    <div class="rating">Rating: 4.5</div>
-                    <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ante eget
-                        libero malesuada vestibulum. Ut feugiat odio nec risus accumsan, nec lobortis sapien condimentum.
-                        Donec nec mauris elit.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Jane Smith</div>
-                    <div class="rating">Rating: 5.0</div>
-                    <div class="comment">Integer nec quam vel orci gravida hendrerit. Vivamus a quam sit amet lacus aliquet
-                        tristique. Phasellus congue libero sit amet massa sollicitudin, eget consequat justo efficitur.
-                    </div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Michael Johnson</div>
-                    <div class="rating">Rating: 4.0</div>
-                    <div class="comment">Vestibulum convallis orci ut elit mollis, eget venenatis mi laoreet. Proin ac
-                        lectus at felis dignissim viverra nec vel ipsum.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Emily Brown</div>
-                    <div class="rating">Rating: 3.5</div>
-                    <div class="comment">Suspendisse potenti. Proin ut nisi a purus tempor interdum. Integer vel nibh sit
-                        amet nisl dignissim ullamcorper.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">David Williams</div>
-                    <div class="rating">Rating: 4.5</div>
-                    <div class="comment">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                        turpis egestas. Nam nec orci vel ante sollicitudin convallis.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Sarah Taylor</div>
-                    <div class="rating">Rating: 5.0</div>
-                    <div class="comment">Aenean sed velit et purus tempus dapibus. Sed vel risus id lectus viverra
-                        consectetur. Curabitur sed lacus ut nisl fringilla dapibus ac sed orci.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Christopher Lee</div>
-                    <div class="rating">Rating: 4.0</div>
-                    <div class="comment">Fusce nec nunc vel mi mattis consequat. Proin quis tellus odio. Phasellus id diam
-                        vel sem vulputate blandit eget sed justo.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Olivia Martinez</div>
-                    <div class="rating">Rating: 4.5</div>
-                    <div class="comment">Nulla facilisi. Maecenas ac quam at dolor finibus accumsan. Fusce auctor, dui ut
-                        sollicitudin fermentum, urna eros lacinia purus, nec ultricies magna nisi nec est.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Daniel Garcia</div>
-                    <div class="rating">Rating: 3.5</div>
-                    <div class="comment">Vestibulum dignissim, mauris at fringilla placerat, libero nulla vestibulum velit,
-                        ac vulputate arcu orci vitae ipsum. Etiam malesuada ligula nec felis vehicula.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Sophia Clark</div>
-                    <div class="rating">Rating: 4.0</div>
-                    <div class="comment">Donec consectetur, libero et rutrum commodo, odio quam dignissim quam, sit amet
-                        lacinia lorem ipsum at lacus.</div>
-                </div>
-            </div> --}}
-
-            <div class="rating-container">
-                <div class="stars">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                </div>
-                <div class="average-rating">Average Rating: 4.5</div>
-            </div>
-
-            <div class="reviews-slider">
-                <div class="review">
-                    <div class="reviewer">John Doe</div>
-                    <div class="rating">Rating: 4.5</div>
-                    <div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ante eget
-                        libero
-                        malesuada vestibulum. Ut feugiat odio nec risus accumsan, nec lobortis sapien condimentum. Donec nec
-                        mauris elit.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Jane Smith</div>
-                    <div class="rating">Rating: 5.0</div>
-                    <div class="comment">Integer nec quam vel orci gravida hendrerit. Vivamus a quam sit amet lacus aliquet
-                        tristique. Phasellus congue libero sit amet massa sollicitudin, eget consequat justo efficitur.
-                    </div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Michael Johnson</div>
-                    <div class="rating">Rating: 4.0</div>
-                    <div class="comment">Vestibulum convallis orci ut elit mollis, eget venenatis mi laoreet. Proin ac
-                        lectus
-                        at felis dignissim viverra nec vel ipsum.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Emily Brown</div>
-                    <div class="rating">Rating: 3.5</div>
-                    <div class="comment">Suspendisse potenti. Proin ut nisi a purus tempor interdum. Integer vel nibh sit
-                        amet
-                        nisl dignissim ullamcorper.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">David Williams</div>
-                    <div class="rating">Rating: 4.5</div>
-                    <div class="comment">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                        turpis
-                        egestas. Nam nec orci vel ante sollicitudin convallis.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Sarah Taylor</div>
-                    <div class="rating">Rating: 5.0</div>
-                    <div class="comment">Aenean sed velit et purus tempus dapibus. Sed vel risus id lectus viverra
-                        consectetur.
-                        Curabitur sed lacus ut nisl fringilla dapibus ac sed orci.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Christopher Lee</div>
-                    <div class="rating">Rating: 4.0</div>
-                    <div class="comment">Fusce nec nunc vel mi mattis consequat. Proin quis tellus odio. Phasellus id diam
-                        vel
-                        sem vulputate blandit eget sed justo.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Olivia Martinez</div>
-                    <div class="rating">Rating: 4.5</div>
-                    <div class="comment">Nulla facilisi. Maecenas ac quam at dolor finibus accumsan. Fusce auctor, dui ut
-                        sollicitudin fermentum, urna eros lacinia purus, nec ultricies magna nisi nec est.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Daniel Garcia</div>
-                    <div class="rating">Rating: 3.5</div>
-                    <div class="comment">Vestibulum dignissim, mauris at fringilla placerat, libero nulla vestibulum velit,
-                        ac
-                        vulputate arcu orci vitae ipsum. Etiam malesuada ligula nec felis vehicula.</div>
-                </div>
-                <div class="review">
-                    <div class="reviewer">Sophia Clark</div>
-                    <div class="rating">Rating: 4.0</div>
-                    <div class="comment">Donec consectetur, libero et rutrum commodo, odio quam dignissim quam, sit amet
-                        lacinia lorem ipsum at lacus.</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- Registration End -->
 @endsection
 
 

@@ -24,8 +24,8 @@
             </div>
             <div class="col-lg-6">
                 <h2>{{ $package->name }}</h2>
-                <p>{{ $package->description }}</p>
-                <p><strong>Price:</strong> ${{ $package->price }}</p>
+                <p class="text-justify">{{ $package->description }}</p>
+                <p><strong>Price:</strong> <i class="fa fa-rupee-sign"> {{ $package->price }}</i></p>
                 <p><strong>Duration:</strong> {{ $package->duration }} days</p>
                 <p><strong>Itinerary:</strong></p>
                 <ul>
