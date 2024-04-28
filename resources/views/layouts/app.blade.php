@@ -33,7 +33,7 @@
     <link rel="canonical" href="{{ URL::current() }}" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ public_asset('assets/frontend/img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
