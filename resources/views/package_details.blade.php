@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('keywords', $package->name.' Package')
+@section('description', "Discover a range of exciting packages for your ". getSettings()->app_name .". Explore thrilling safari experiences, luxurious accommodations, and unforgettable moments amidst the beauty of the wilderness. Choose from our curated selection of packages and embark on the ultimate wildlife getaway in ". getSettings()->app_name)
 @section('content')
     <!-- Header Start -->
     <div class="container-fluid page-header">

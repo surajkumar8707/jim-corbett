@@ -9,8 +9,9 @@
     <meta charset="utf-8">
     <title>{{ $settings->app_name }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="{{ $settings->app_name }}" name="{{ $settings->app_name }}">
-    <meta content="{{ $settings->app_name }}" name="{{ $settings->app_name }}">
+    <meta name="name" content="@yield('name', $settings->app_name)">
+    <meta name="keywords" content="@yield('keywords', $settings->app_name)">
+    <meta name="description" content="@yield('description', $settings->app_name)">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">

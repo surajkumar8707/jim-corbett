@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'Destination Wedding')
+@section('description', "Celebrate your special day amidst the picturesque landscapes of ". getSettings()->app_name .". Experience a magical wedding surrounded by nature's beauty, with customized arrangements and impeccable service.")
+
 @section('content')
     <!-- Header Section -->
     <div class="container-fluid page-header">

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'Jungle Safari')
+@section('description', "Embark on an exhilarating jungle safari adventure in ". getSettings()->app_name .". Experience the thrill of encountering diverse wildlife, including majestic tigers, elephants, and more, amidst the pristine wilderness of the park.")
+
 @section('content')
     <!-- Page Header -->
     <div class="container-fluid page-header" style="">

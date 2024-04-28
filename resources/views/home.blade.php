@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'Home Page')
+@section('description', "Welcome to ". getSettings()->app_name ." , your gateway to adventure and wildlife exploration. Discover the beauty of the jungle, exciting safari experiences, and comfortable accommodations amidst nature.")
+
 @push('styles')
     <style>
         .rating-container {

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'Corporate Group Retreats')
+@section('description', "Get in touch with us for inquiries, bookings, and assistance regarding your visit to ". getSettings()->app_name .". Our team is dedicated to providing you with all the information and support you need for a memorable experience.")
+
 @section('content')
     <!-- Header Start -->
     <div class="container-fluid page-header">

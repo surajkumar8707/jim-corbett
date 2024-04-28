@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'Terms and Conditions')
+@section('description', "Familiarize yourself with the Terms and Conditions governing the use of our website and services at ". getSettings()->app_name .". By accessing and using our platform, you agree to abide by these terms, which outline your rights, responsibilities, and limitations when interacting with us.")
+
 @section('content')
     <!-- Page Header -->
     <div class="container-fluid page-header">

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'Privacy Policy')
+@section('description', "Learn about our commitment to protecting your privacy and personal information at ". getSettings()->app_name .". Our Privacy Policy outlines how we collect, use, and safeguard your data to ensure a secure and transparent experience for all our visitors.")
+
 @section('content')
     <!-- Page Header -->
     <div class="container-fluid page-header">

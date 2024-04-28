@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('keywords', 'School groups')
+@section('description', "Plan an educational and adventurous trip for your school group to ".getSettings()->app_name. ". Immerse students in nature, wildlife, and conservation efforts while creating unforgettable memories.")
+
 @section('content')
     <!-- Page Header Start -->
     <div class="container-fluid page-header">
