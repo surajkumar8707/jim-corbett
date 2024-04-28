@@ -14,7 +14,10 @@
     <meta name="author" content="{{ $settings->app_name }}">
     <title>{{ $settings->app_name }} - @yield('pageTitle', $settings->app_name)</title>
 
-    <meta name="theme-color" content="#FFC30E" />
+    <!-- Web Manifest -->
+    <link rel="manifest" href="{{ public_asset('assets/frontend/js/manifest.json') }}">
+
+    <meta name="theme-color" content="#7AB730" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ URL::current() }}" />
     <meta property="og:site_name" content="{{ $settings->app_name }}" />

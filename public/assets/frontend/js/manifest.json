@@ -1,0 +1,15 @@
+{
+    "name": "Jim Corbett",
+    "short_name": "Corbett National Park",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7AB730",
+    "icons": [
+        {
+            "src": "public/assets/frontend/img/favicon.ico",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
