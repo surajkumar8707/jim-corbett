@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'School groups')
+@section('ogTitle', 'School groups')
+@section('ogDescription', "Plan an educational and adventurous trip for your school group to ".getSettings()->app_name. ". Immerse students in nature, wildlife, and conservation efforts while creating unforgettable memories.")
+@section('twitterTitle', 'School groups')
+@section('twitterDescription', "Plan an educational and adventurous trip for your school group to ".getSettings()->app_name. ". Immerse students in nature, wildlife, and conservation efforts while creating unforgettable memories.")
 @section('keywords', 'School groups')
 @section('description', "Plan an educational and adventurous trip for your school group to ".getSettings()->app_name. ". Immerse students in nature, wildlife, and conservation efforts while creating unforgettable memories.")
 

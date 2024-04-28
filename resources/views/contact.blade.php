@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Contact Us')
+@section('ogTitle', 'Contact Us')
+@section('ogDescription', "Get in touch with us for inquiries, bookings, and assistance regarding your visit to ". getSettings()->app_name .". Our team is dedicated to providing you with all the information and support you need for a memorable experience.")
+@section('twitterTitle', 'Contact Us')
+@section('twitterDescription', "Get in touch with us for inquiries, bookings, and assistance regarding your visit to ". getSettings()->app_name .". Our team is dedicated to providing you with all the information and support you need for a memorable experience.")
 @section('keywords', 'Corporate Group Retreats')
 @section('description', "Get in touch with us for inquiries, bookings, and assistance regarding your visit to ". getSettings()->app_name .". Our team is dedicated to providing you with all the information and support you need for a memorable experience.")
 

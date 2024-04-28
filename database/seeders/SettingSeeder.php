@@ -23,7 +23,7 @@ class SettingSeeder extends Seeder
             'whatsapp' => '+91 7983013274',
             'contact' => '+91 7983013274',
             'address' => 'Jim Corbett Nation Park Ranikhek Road, Ramnagar, Discrict-National, Utteakhand, 244715',
-            'header_image' => 'assets/images/header-logo.png',
+            'header_image' => 'assets/frontend/img/header.jpg',
         ]);
     }
 }

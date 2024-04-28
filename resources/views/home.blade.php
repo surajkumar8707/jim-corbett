@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Home Page')
+@section('ogTitle', 'Home Page')
+@section('ogDescription', "Welcome to ". getSettings()->app_name ." , your gateway to adventure and wildlife exploration. Discover the beauty of the jungle, exciting safari experiences, and comfortable accommodations amidst nature.")
+@section('twitterTitle', 'Home Page')
+@section('twitterDescription', "Welcome to ". getSettings()->app_name ." , your gateway to adventure and wildlife exploration. Discover the beauty of the jungle, exciting safari experiences, and comfortable accommodations amidst nature.")
 @section('keywords', 'Home Page')
 @section('description', "Welcome to ". getSettings()->app_name ." , your gateway to adventure and wildlife exploration. Discover the beauty of the jungle, exciting safari experiences, and comfortable accommodations amidst nature.")
 

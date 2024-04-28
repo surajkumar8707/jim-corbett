@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Privacy Policy')
+@section('ogTitle', 'Privacy Policy')
+@section('ogDescription', "Learn about our commitment to protecting your privacy and personal information at ". getSettings()->app_name .". Our Privacy Policy outlines how we collect, use, and safeguard your data to ensure a secure and transparent experience for all our visitors.")
+@section('twitterTitle', 'Privacy Policy')
+@section('twitterDescription', "Learn about our commitment to protecting your privacy and personal information at ". getSettings()->app_name .". Our Privacy Policy outlines how we collect, use, and safeguard your data to ensure a secure and transparent experience for all our visitors.")
 @section('keywords', 'Privacy Policy')
 @section('description', "Learn about our commitment to protecting your privacy and personal information at ". getSettings()->app_name .". Our Privacy Policy outlines how we collect, use, and safeguard your data to ensure a secure and transparent experience for all our visitors.")
 

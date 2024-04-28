@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Resort')
+@section('ogTitle', 'Resort')
+@section('ogDescription', "Discover luxurious resorts nestled amidst the serene surroundings of ". getSettings()->app_name .". Experience comfort, tranquility, and warm hospitality amidst the natural beauty of the park.")
+@section('twitterTitle', 'Resort')
+@section('twitterDescription', "Discover luxurious resorts nestled amidst the serene surroundings of ". getSettings()->app_name .". Experience comfort, tranquility, and warm hospitality amidst the natural beauty of the park.")
 @section('keywords', 'Resort')
 @section('description', "Discover luxurious resorts nestled amidst the serene surroundings of ". getSettings()->app_name .". Experience comfort, tranquility, and warm hospitality amidst the natural beauty of the park.")
 

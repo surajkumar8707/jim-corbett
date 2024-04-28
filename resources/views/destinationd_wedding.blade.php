@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Destination Wedding')
+@section('ogTitle', 'Destination Wedding')
+@section('ogDescription', "Celebrate your special day amidst the picturesque landscapes of ". getSettings()->app_name .". Experience a magical wedding surrounded by nature's beauty, with customized arrangements and impeccable service.")
+@section('twitterTitle', 'Destination Wedding')
+@section('twitterDescription', "Celebrate your special day amidst the picturesque landscapes of ". getSettings()->app_name .". Experience a magical wedding surrounded by nature's beauty, with customized arrangements and impeccable service.")
 @section('keywords', 'Destination Wedding')
 @section('description', "Celebrate your special day amidst the picturesque landscapes of ". getSettings()->app_name .". Experience a magical wedding surrounded by nature's beauty, with customized arrangements and impeccable service.")
 

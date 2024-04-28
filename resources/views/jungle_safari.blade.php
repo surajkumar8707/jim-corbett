@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Jungle Safari')
+@section('ogTitle', 'Jungle Safari')
+@section('ogDescription', "Embark on an exhilarating jungle safari adventure in ". getSettings()->app_name .". Experience the thrill of encountering diverse wildlife, including majestic tigers, elephants, and more, amidst the pristine wilderness of the park.")
+@section('twitterTitle', 'Jungle Safari')
+@section('twitterDescription', "Embark on an exhilarating jungle safari adventure in ". getSettings()->app_name .". Experience the thrill of encountering diverse wildlife, including majestic tigers, elephants, and more, amidst the pristine wilderness of the park.")
 @section('keywords', 'Jungle Safari')
 @section('description', "Embark on an exhilarating jungle safari adventure in ". getSettings()->app_name .". Experience the thrill of encountering diverse wildlife, including majestic tigers, elephants, and more, amidst the pristine wilderness of the park.")
 

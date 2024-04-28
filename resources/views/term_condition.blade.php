@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Terms and Conditions')
+@section('ogTitle', 'Terms and Conditions')
+@section('ogDescription', "Familiarize yourself with the Terms and Conditions governing the use of our website and services at ". getSettings()->app_name .". By accessing and using our platform, you agree to abide by these terms, which outline your rights, responsibilities, and limitations when interacting with us.")
+@section('twitterTitle', 'Terms and Conditions')
+@section('twitterDescription', "Familiarize yourself with the Terms and Conditions governing the use of our website and services at ". getSettings()->app_name .". By accessing and using our platform, you agree to abide by these terms, which outline your rights, responsibilities, and limitations when interacting with us.")
 @section('keywords', 'Terms and Conditions')
 @section('description', "Familiarize yourself with the Terms and Conditions governing the use of our website and services at ". getSettings()->app_name .". By accessing and using our platform, you agree to abide by these terms, which outline your rights, responsibilities, and limitations when interacting with us.")
 

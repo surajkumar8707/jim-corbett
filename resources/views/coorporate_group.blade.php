@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Corporate Group Retreats')
+@section('ogTitle', 'Corporate Group Retreats')
+@section('ogDescription', "Elevate team bonding and rejuvenate amidst nature with corporate group retreats in ". getSettings()->app_name .". Plan exciting team-building activities, conferences, and relaxation in a serene environment.")
+@section('twitterTitle', 'Corporate Group Retreats')
+@section('twitterDescription', "Elevate team bonding and rejuvenate amidst nature with corporate group retreats in ". getSettings()->app_name .". Plan exciting team-building activities, conferences, and relaxation in a serene environment.")
 @section('keywords', 'Corporate Group Retreats')
 @section('description', "Elevate team bonding and rejuvenate amidst nature with corporate group retreats in ". getSettings()->app_name .". Plan exciting team-building activities, conferences, and relaxation in a serene environment.")
 

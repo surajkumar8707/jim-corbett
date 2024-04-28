@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('keywords', 'Jungle Safari')
+@section('pageTitle', 'Canter Ride')
+@section('ogTitle', 'Canter Ride')
+@section('ogDescription', "Enjoy a memorable Canter Ride experience in ". getSettings()->app_name .". Explore the natural beauty and wildlife of the park from the comfort of a safari vehicle, accompanied by experienced guides.")
+@section('twitterTitle', 'Canter Ride')
+@section('twitterDescription', "Enjoy a memorable Canter Ride experience in ". getSettings()->app_name .". Explore the natural beauty and wildlife of the park from the comfort of a safari vehicle, accompanied by experienced guides.")
+@section('keywords', 'Canter Ride')
 @section('description', "Enjoy a memorable Canter Ride experience in ". getSettings()->app_name .". Explore the natural beauty and wildlife of the park from the comfort of a safari vehicle, accompanied by experienced guides.")
 
 @section('content')

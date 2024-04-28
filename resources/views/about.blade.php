@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'About Us')
+@section('ogTitle', 'About Us')
+@section('ogDescription', "Learn about the rich history, conservation efforts, and mission of ". getSettings()->app_name .". Discover our commitment to preserving wildlife, promoting sustainable tourism, and providing unforgettable experiences amidst the natural wonders of the park. Explore our story and join us in our journey to protect and celebrate the beauty of ". getSettings()->app_name)
+@section('twitterTitle', 'About Us')
+@section('twitterDescription', "Learn about the rich history, conservation efforts, and mission of ". getSettings()->app_name .". Discover our commitment to preserving wildlife, promoting sustainable tourism, and providing unforgettable experiences amidst the natural wonders of the park. Explore our story and join us in our journey to protect and celebrate the beauty of ". getSettings()->app_name)
+@section('keywords', 'About Us')
+@section('description', "Learn about the rich history, conservation efforts, and mission of ". getSettings()->app_name .". Discover our commitment to preserving wildlife, promoting sustainable tourism, and providing unforgettable experiences amidst the natural wonders of the park. Explore our story and join us in our journey to protect and celebrate the beauty of ". getSettings()->app_name)
+
 @section('content')
     <!-- Header Start -->
     <div class="container-fluid page-header">
@@ -25,12 +33,12 @@
                 <p>Nulla facilisi. Phasellus pretium consectetur nisl at eleifend. Morbi sit amet lorem nec risus vestibulum dapibus. Donec in elit in ipsum cursus auctor.</p>
             </div>
             <div class="col-lg-6">
-                <img src="path_to_your_image" alt="About Us Image" class="img-fluid">
+                <img src="https://www.corbetttourism.com/img/home/explore1.png" alt="About Us Image" class="img-fluid">
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-lg-6">
-                <img src="path_to_your_image" alt="Our Mission Image" class="img-fluid">
+                <img src="https://www.seekpng.com/png/detail/252-2524099_vision-mission-mission-of-a-travel-agency.png" alt="Our Mission Image" class="img-fluid">
             </div>
             <div class="col-lg-6">
                 <h2 class="text-primary mb-4">Our Mission</h2>
