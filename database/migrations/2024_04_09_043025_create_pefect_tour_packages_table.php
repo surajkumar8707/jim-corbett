@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('images')->nullable();
             $table->integer('persons')->unsigned()->nullable();
-            $table->decimal('price', 8, 2)->nullable();
+            $table->string('price')->nullable();
             $table->text('duration')->nullable();
             $table->text('itinerary')->nullable();
             $table->text('accommodations')->nullable();
