@@ -20,10 +20,11 @@ class FrontEndController extends Controller
     {
         $message = null;
         $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
-        $to = $main_email; // Receiver's email address
+        $from = "surraj8707@gmail.com";
+        $to = "harshitajoshi@corbettnationalparkbooking.co.in"; // Receiver's email address
         $subject = "Test Email"; // Email subject
         $mail_message = "This is a test email sent using the PHP mail function."; // Email message
-        $headers = "From: " . $main_email . "\r\n" .
+        $headers = "From: " . $from . "\r\n" .
             "Reply-To: " . $main_email . "\r\n" .
             "X-Mailer: PHP/" . phpversion(); // Email headers
         // Send email
