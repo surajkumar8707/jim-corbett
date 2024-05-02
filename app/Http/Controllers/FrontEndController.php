@@ -97,7 +97,7 @@ class FrontEndController extends Controller
             $subject = "New Contact Received from " . $validatedData['name']; // Email subject
             $message = "Name: " . $validatedData['name'] . "\n" .
                 "Email: " . $validatedData['email'] . "\n" .
-                "Phone: " . $validatedData['phone'] . "\n" .
+                // "Phone: " . $validatedData['phone'] . "\n" .
                 "Message: " . $validatedData['message']; // Email message
             $headers = "From: " . $validatedData['email']; // Sender's email address as From
 
