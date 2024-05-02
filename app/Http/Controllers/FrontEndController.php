@@ -19,21 +19,29 @@ class FrontEndController extends Controller
     public function index()
     {
         $message = null;
-        $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
-        $from = "harshitajoshi@corbettnationalparkbooking.co.in";
+        // $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
+        // $from = "harshitajoshi@corbettnationalparkbooking.co.in";
+        // $to = "surraj8707@gmail.com"; // Receiver's email address
+        // $subject = "Test Email"; // Email subject
+        // $mail_message = "This is a test email sent using the PHP mail function."; // Email message
+        // $headers = "From: " . $from . "\r\n" .
+        //     "Reply-To: " . $from . "\r\n" .
+        //     "X-Mailer: PHP/" . phpversion(); // Email headers
+
+        // // Send email
+        // if (mail($to, $subject, $mail_message, $headers)) {
+        //     $message = "Email sent successfully.";
+        // } else {
+        //     $message = "Failed to send email.";
+        // }
+
         $to = "surraj8707@gmail.com"; // Receiver's email address
         $subject = "Test Email"; // Email subject
-        $mail_message = "This is a test email sent using the PHP mail function."; // Email message
-        $headers = "From: " . $from . "\r\n" .
-            "Reply-To: " . $from . "\r\n" .
-            "X-Mailer: PHP/" . phpversion(); // Email headers
-
-        // Send email
-        if (mail($to, $subject, $mail_message, $headers)) {
-            $message = "Email sent successfully.";
-        } else {
-            $message = "Failed to send email.";
-        }
+        $message = "This is a test email sent using Laravel's Mail facade."; // Email message
+        \Illuminate\Support\Facades\Mail::raw($message, function ($mail) use ($to, $subject) {
+            $mail->to($to)
+                ->subject($subject);
+        });
 
 
 
