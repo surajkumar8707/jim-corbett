@@ -19,9 +19,9 @@ class FrontEndController extends Controller
     public function index()
     {
         $message = null;
-        $to = "surraj8707@gmail.com"; // Receiver's email address
-        $subject = "Test Email"; // Email subject
         $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
+        $to = $main_email; // Receiver's email address
+        $subject = "Test Email"; // Email subject
         $mail_message = "This is a test email sent using the PHP mail function."; // Email message
         $headers = "From: " . $main_email . "\r\n" .
             "Reply-To: " . $main_email . "\r\n" .
