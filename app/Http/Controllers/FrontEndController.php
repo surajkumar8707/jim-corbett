@@ -18,6 +18,22 @@ class FrontEndController extends Controller
      */
     public function index()
     {
+        $message = null;
+        $to = "surraj8707@gmail.com"; // Receiver's email address
+        $subject = "Test Email"; // Email subject
+        $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
+        $mail_message = "This is a test email sent using the PHP mail function."; // Email message
+        $headers = "From: " . $main_email . "\r\n" .
+            "Reply-To: " . $main_email . "\r\n" .
+            "X-Mailer: PHP/" . phpversion(); // Email headers
+        // Send email
+        if (mail($to, $subject, $mail_message, $headers)) {
+            $message = "Email sent successfully.";
+        } else {
+            $message = "Failed to send email.";
+        }
+
+
         $packages = PefectTourPackages::where([
             'tour_category_id' => 2,
             'status' => 1,
@@ -35,7 +51,7 @@ class FrontEndController extends Controller
 
         $home_page_carousel = HomePageCarousel::where('status', 1)->orderBy('status', 'DESC')->get();
         // dd($packages->toArray());
-        return view('home', compact('packages', 'tour_packages', 'corbett_packages', 'home_page_carousel'));
+        return view('home', compact('packages', 'tour_packages', 'corbett_packages', 'home_page_carousel', 'message'));
     }
 
     /**
@@ -131,7 +147,7 @@ class FrontEndController extends Controller
             'status' => 1,
         ])->get();
         // dd($packages);
-        return view('resorts' , compact('packages'));
+        return view('resorts', compact('packages'));
     }
 
     /**
@@ -210,6 +226,26 @@ class FrontEndController extends Controller
             'message' => $validatedData['message'],
         ]);
 
-        return redirect()->back()->with('success', 'Enquiry submitted successfully!');
+        // $to = "surraj8707@gmail.com"; // Receiver's email address
+        // $subject = "Test Email"; // Email subject
+        // $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
+        // $message = "This is a test email sent using the PHP mail function."; // Email message
+        // $headers = "From: ". $main_email ." . "\r\n" ."Reply-To: ". $main_email ." . "\r\n" . "X-Mailer: PHP/" . phpversion(); // Email headers
+
+        $to = "surraj8707@gmail.com"; // Receiver's email address
+        $subject = "Test Email"; // Email subject
+        $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
+        $message = "This is a test email sent using the PHP mail function."; // Email message
+        $headers = "From: " . $main_email . "\r\n" .
+            "Reply-To: " . $main_email . "\r\n" .
+            "X-Mailer: PHP/" . phpversion(); // Email headers
+        // Send email
+        if (mail($to, $subject, $message, $headers)) {
+            $message = "Email sent successfully.";
+        } else {
+            $message = "Failed to send email.";
+        }
+
+        return redirect()->back()->with('success', $message);
     }
 }

@@ -186,6 +186,7 @@
         <div class="container mt-5">
             <div class="text-center mb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Home Page</h6>
+                <h1>( {{ $message }} )</h1>
                 <h1>Welcome to {{ isset(getSettings()->app_name) ? getSettings()->app_name : '' }}</h1>
             </div>
             <div class="container">
