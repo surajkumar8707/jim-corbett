@@ -92,6 +92,23 @@ class FrontEndController extends Controller
 
         $contact = Contact::create($validatedData);
 
+        if (getSettings() and isset(getSettings()->email) and !empty(getSettings()->email)) {
+            $to = getSettings()->email; // Admin's email address
+            $subject = "New Contact Received from " . $validatedData['name']; // Email subject
+            $message = "Name: " . $validatedData['name'] . "\n" .
+                "Email: " . $validatedData['email'] . "\n" .
+                "Phone: " . $validatedData['phone'] . "\n" .
+                "Message: " . $validatedData['message']; // Email message
+            $headers = "From: " . $validatedData['email']; // Sender's email address as From
+
+            // Send email
+            if (mail($to, $subject, $message, $headers)) {
+                $message = "Enquiry submitted successfully!";
+            } else {
+                $message = "Failed to submit enquiry.";
+            }
+        }
+
         // Optionally, you can add a success message or redirect to a thank-you page
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
@@ -227,21 +244,22 @@ class FrontEndController extends Controller
         // }
 
         // Construct email message
-        $to = "surraj8707@gmail.com"; // Admin's email address
-        $subject = "New Enquiry Received from ". $validatedData['name']; // Email subject
-        $message = "Name: " . $validatedData['name'] . "\n" .
-            "Email: " . $validatedData['email'] . "\n" .
-            "Phone: " . $validatedData['phone'] . "\n" .
-            "Message: " . $validatedData['message']; // Email message
-        $headers = "From: " . $validatedData['email']; // Sender's email address as From
+        if (getSettings() and isset(getSettings()->email) and !empty(getSettings()->email)) {
+            $to = getSettings()->email; // Admin's email address
+            $subject = "New Enquiry Received from " . $validatedData['name']; // Email subject
+            $message = "Name: " . $validatedData['name'] . "\n" .
+                "Email: " . $validatedData['email'] . "\n" .
+                "Phone: " . $validatedData['phone'] . "\n" .
+                "Message: " . $validatedData['message']; // Email message
+            $headers = "From: " . $validatedData['email']; // Sender's email address as From
 
-        // Send email
-        if (mail($to, $subject, $message, $headers)) {
-            $message = "Enquiry submitted successfully!";
-        } else {
-            $message = "Failed to submit enquiry.";
+            // Send email
+            if (mail($to, $subject, $message, $headers)) {
+                $message = "Enquiry submitted successfully!";
+            } else {
+                $message = "Failed to submit enquiry.";
+            }
         }
-        dd($message);
 
         return redirect()->back()->with('success', 'Enquiry submitted successfully!');
     }
