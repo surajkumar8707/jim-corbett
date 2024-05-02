@@ -18,33 +18,6 @@ class FrontEndController extends Controller
      */
     public function index()
     {
-        $message = null;
-        // $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
-        // $from = "harshitajoshi@corbettnationalparkbooking.co.in";
-        // $to = "surraj8707@gmail.com"; // Receiver's email address
-        // $subject = "Test Email"; // Email subject
-        // $mail_message = "This is a test email sent using the PHP mail function."; // Email message
-        // $headers = "From: " . $from . "\r\n" .
-        //     "Reply-To: " . $from . "\r\n" .
-        //     "X-Mailer: PHP/" . phpversion(); // Email headers
-
-        // // Send email
-        // if (mail($to, $subject, $mail_message, $headers)) {
-        //     $message = "Email sent successfully.";
-        // } else {
-        //     $message = "Failed to send email.";
-        // }
-
-        $to = "surraj8707@gmail.com"; // Receiver's email address
-        $subject = "Test Email"; // Email subject
-        $message = "This is a test email sent using Laravel's Mail facade."; // Email message
-        \Illuminate\Support\Facades\Mail::raw($message, function ($mail) use ($to, $subject) {
-            $mail->to($to)
-                ->subject($subject);
-        });
-
-
-
         $packages = PefectTourPackages::where([
             'tour_category_id' => 2,
             'status' => 1,
@@ -62,7 +35,7 @@ class FrontEndController extends Controller
 
         $home_page_carousel = HomePageCarousel::where('status', 1)->orderBy('status', 'DESC')->get();
         // dd($packages->toArray());
-        return view('home', compact('packages', 'tour_packages', 'corbett_packages', 'home_page_carousel', 'message'));
+        return view('home', compact('packages', 'tour_packages', 'corbett_packages', 'home_page_carousel'));
     }
 
     /**
@@ -237,26 +210,39 @@ class FrontEndController extends Controller
             'message' => $validatedData['message'],
         ]);
 
+        // $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
+        // $from = "harshitajoshi@corbettnationalparkbooking.co.in";
         // $to = "surraj8707@gmail.com"; // Receiver's email address
         // $subject = "Test Email"; // Email subject
-        // $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
-        // $message = "This is a test email sent using the PHP mail function."; // Email message
-        // $headers = "From: ". $main_email ." . "\r\n" ."Reply-To: ". $main_email ." . "\r\n" . "X-Mailer: PHP/" . phpversion(); // Email headers
+        // $mail_message = "This is a test email sent using the PHP mail function."; // Email message
+        // $headers = "From: " . $from . "\r\n" .
+        //     "Reply-To: " . $from . "\r\n" .
+        //     "X-Mailer: PHP/" . phpversion(); // Email headers
 
-        $to = "surraj8707@gmail.com"; // Receiver's email address
-        $subject = "Test Email"; // Email subject
-        $main_email = "harshitajoshi@corbettnationalparkbooking.co.in";
-        $message = "This is a test email sent using the PHP mail function."; // Email message
-        $headers = "From: " . $main_email . "\r\n" .
-            "Reply-To: " . $main_email . "\r\n" .
-            "X-Mailer: PHP/" . phpversion(); // Email headers
+        // // Send email
+        // if (mail($to, $subject, $mail_message, $headers)) {
+        //     $message = "Email sent successfully.";
+        // } else {
+        //     $message = "Failed to send email.";
+        // }
+
+        // Construct email message
+        $to = "surraj8707@gmail.com"; // Admin's email address
+        $subject = "New Enquiry Received from ". $validatedData['name']; // Email subject
+        $message = "Name: " . $validatedData['name'] . "\n" .
+            "Email: " . $validatedData['email'] . "\n" .
+            "Phone: " . $validatedData['phone'] . "\n" .
+            "Message: " . $validatedData['message']; // Email message
+        $headers = "From: " . $validatedData['email']; // Sender's email address as From
+
         // Send email
         if (mail($to, $subject, $message, $headers)) {
-            $message = "Email sent successfully.";
+            $message = "Enquiry submitted successfully!";
         } else {
-            $message = "Failed to send email.";
+            $message = "Failed to submit enquiry.";
         }
+        dd($message);
 
-        return redirect()->back()->with('success', $message);
+        return redirect()->back()->with('success', 'Enquiry submitted successfully!');
     }
 }
