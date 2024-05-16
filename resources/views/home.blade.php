@@ -297,7 +297,7 @@
                                             4
                                             <small>(1250)</small>
                                         </h6>
-                                        <h5 class="m-0"><i class="fa fa-rupee-sign  mr-2"> {{ $package->price }}</i>
+                                        <h5 class="m-0"> {!! $package->price !!}
                                         </h5>
                                     </div>
                                 </div>
